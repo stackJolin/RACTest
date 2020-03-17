@@ -1,1 +1,1 @@
-../../../ReactiveObjC/ReactiveObjC/UIControl+RACSignalSupportPrivate.h
+../../../../../ReactiveObjC/ReactiveObjC/UIControl+RACSignalSupportPrivate.h

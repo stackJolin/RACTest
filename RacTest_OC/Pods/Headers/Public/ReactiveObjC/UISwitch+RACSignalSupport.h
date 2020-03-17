@@ -1,1 +1,1 @@
-../../../ReactiveObjC/ReactiveObjC/UISwitch+RACSignalSupport.h
+../../../../../ReactiveObjC/ReactiveObjC/UISwitch+RACSignalSupport.h

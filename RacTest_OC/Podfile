@@ -4,7 +4,7 @@ platform :ios, '9.0'
 
 def all_pods
   pod 'Masonry'
-  pod 'ReactiveObjC'
+  pod 'ReactiveObjC', :path => '../ReactiveObjC/'
   
 end
 

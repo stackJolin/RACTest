@@ -1,1 +1,1 @@
-../../../ReactiveObjC/ReactiveObjC/RACStringSequence.h
+../../../../../ReactiveObjC/ReactiveObjC/RACStringSequence.h

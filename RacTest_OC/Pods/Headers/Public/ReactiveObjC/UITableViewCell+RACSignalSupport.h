@@ -1,1 +1,1 @@
-../../../ReactiveObjC/ReactiveObjC/UITableViewCell+RACSignalSupport.h
+../../../../../ReactiveObjC/ReactiveObjC/UITableViewCell+RACSignalSupport.h

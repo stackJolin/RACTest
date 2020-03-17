@@ -1,1 +1,1 @@
-../../../ReactiveObjC/ReactiveObjC/UISegmentedControl+RACSignalSupport.h
+../../../../../ReactiveObjC/ReactiveObjC/UISegmentedControl+RACSignalSupport.h

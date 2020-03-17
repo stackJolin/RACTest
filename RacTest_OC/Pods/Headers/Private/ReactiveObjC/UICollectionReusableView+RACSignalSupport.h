@@ -1,1 +1,1 @@
-../../../ReactiveObjC/ReactiveObjC/UICollectionReusableView+RACSignalSupport.h
+../../../../../ReactiveObjC/ReactiveObjC/UICollectionReusableView+RACSignalSupport.h

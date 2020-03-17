@@ -1,1 +1,1 @@
-../../../ReactiveObjC/ReactiveObjC/NSObject+RACDescription.h
+../../../../../ReactiveObjC/ReactiveObjC/NSObject+RACDescription.h
