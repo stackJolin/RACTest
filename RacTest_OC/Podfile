@@ -9,6 +9,7 @@ def all_pods
   pod 'ReactiveObjC', :path => '../ReactiveObjC/'
   pod 'AFNetworking', :path => '../AFNetworking/'
   pod 'AFNetworking', :path => '../WCDB/'
+  pod 'IQKeyBoardManager'
   
 end
 
