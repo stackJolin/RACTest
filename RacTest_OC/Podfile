@@ -4,7 +4,11 @@ platform :ios, '9.0'
 
 def all_pods
   pod 'Masonry'
+#  pod 'ReactiveObjC'
+#  pod 'WCDB'
   pod 'ReactiveObjC', :path => '../ReactiveObjC/'
+  pod 'AFNetworking', :path => '../AFNetworking/'
+  pod 'AFNetworking', :path => '../WCDB/'
   
 end
 

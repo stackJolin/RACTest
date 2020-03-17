@@ -14,6 +14,8 @@
 		6D51EA8D242073D900A233E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D51EA8C242073D900A233E0 /* Assets.xcassets */; };
 		6D51EA90242073D900A233E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D51EA8E242073D900A233E0 /* LaunchScreen.storyboard */; };
 		6D51EA93242073D900A233E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D51EA92242073D900A233E0 /* main.m */; };
+		8980D29F242108EF00C74FB8 /* LTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8980D29E242108EF00C74FB8 /* LTBaseView.m */; };
+		8980D2A4242109A100C74FB8 /* LTBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8980D2A3242109A100C74FB8 /* LTBaseVC.m */; };
 		A29BD8639AECC6B2C5628BA5 /* libPods-RacTest_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDDEB948B8C2570FE1B8FF0 /* libPods-RacTest_OC.a */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,10 @@
 		6D51EA91242073D900A233E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D51EA92242073D900A233E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DDDEB948B8C2570FE1B8FF0 /* libPods-RacTest_OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RacTest_OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8980D29D242108EF00C74FB8 /* LTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBaseView.h; sourceTree = "<group>"; };
+		8980D29E242108EF00C74FB8 /* LTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBaseView.m; sourceTree = "<group>"; };
+		8980D2A2242109A100C74FB8 /* LTBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBaseVC.h; sourceTree = "<group>"; };
+		8980D2A3242109A100C74FB8 /* LTBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBaseVC.m; sourceTree = "<group>"; };
 		A6A33C69A95972FC23804455 /* Pods-RacTest_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacTest_OC.release.xcconfig"; path = "Target Support Files/Pods-RacTest_OC/Pods-RacTest_OC.release.xcconfig"; sourceTree = "<group>"; };
 		F67A634A227F7CA088AA2560 /* Pods-RacTest_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacTest_OC.debug.xcconfig"; path = "Target Support Files/Pods-RacTest_OC/Pods-RacTest_OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +74,10 @@
 		6D51EA7F242073D400A233E0 /* RacTest_OC */ = {
 			isa = PBXGroup;
 			children = (
+				8980D2A12421097C00C74FB8 /* Router */,
+				8980D29A242108B800C74FB8 /* LTCoreKit */,
+				8980D299242108A100C74FB8 /* LTUIKit */,
+				8980D2942421041300C74FB8 /* Module */,
 				6D51EA80242073D400A233E0 /* AppDelegate.h */,
 				6D51EA81242073D400A233E0 /* AppDelegate.m */,
 				6D51EA83242073D400A233E0 /* SceneDelegate.h */,
@@ -83,13 +93,100 @@
 			path = RacTest_OC;
 			sourceTree = "<group>";
 		};
+		8980D2942421041300C74FB8 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8980D2952421044100C74FB8 /* Bus */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8980D2952421044100C74FB8 /* Bus */ = {
+			isa = PBXGroup;
+			children = (
+				8980D2982421084600C74FB8 /* View */,
+				8980D2972421046E00C74FB8 /* Model */,
+				8980D2962421046500C74FB8 /* VC */,
+			);
+			path = Bus;
+			sourceTree = "<group>";
+		};
+		8980D2962421046500C74FB8 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		8980D2972421046E00C74FB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8980D2982421084600C74FB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8980D299242108A100C74FB8 /* LTUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8980D2A02421096C00C74FB8 /* VC */,
+				8980D29C242108CD00C74FB8 /* Label */,
+				8980D29B242108C600C74FB8 /* View */,
+			);
+			path = LTUIKit;
+			sourceTree = "<group>";
+		};
+		8980D29A242108B800C74FB8 /* LTCoreKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LTCoreKit;
+			sourceTree = "<group>";
+		};
+		8980D29B242108C600C74FB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8980D29D242108EF00C74FB8 /* LTBaseView.h */,
+				8980D29E242108EF00C74FB8 /* LTBaseView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8980D29C242108CD00C74FB8 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		8980D2A02421096C00C74FB8 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8980D2A2242109A100C74FB8 /* LTBaseVC.h */,
+				8980D2A3242109A100C74FB8 /* LTBaseVC.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		8980D2A12421097C00C74FB8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		AE02D2BE6B58265AD4399AA8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				F67A634A227F7CA088AA2560 /* Pods-RacTest_OC.debug.xcconfig */,
 				A6A33C69A95972FC23804455 /* Pods-RacTest_OC.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -197,6 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8980D29F242108EF00C74FB8 /* LTBaseView.m in Sources */,
+				8980D2A4242109A100C74FB8 /* LTBaseVC.m in Sources */,
 				6D51EA88242073D400A233E0 /* ViewController.m in Sources */,
 				6D51EA82242073D400A233E0 /* AppDelegate.m in Sources */,
 				6D51EA93242073D900A233E0 /* main.m in Sources */,
