@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+
+def all_pods
+  pod 'Masonry'
+  pod 'ReactiveObjC'
+  
+end
+
+target 'RacTest_OC' do
+  all_pods
+end

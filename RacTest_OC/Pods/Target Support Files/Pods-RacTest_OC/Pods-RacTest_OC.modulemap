@@ -1,0 +1,6 @@
+module Pods_RacTest_OC {
+  umbrella header "Pods-RacTest_OC-umbrella.h"
+
+  export *
+  module * { export * }
+}
