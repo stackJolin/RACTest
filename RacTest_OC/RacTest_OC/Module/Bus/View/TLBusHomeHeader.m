@@ -7,13 +7,13 @@
 //
 
 #import "TLBusHomeHeader.h"
+#import "TLBusHomeHeaderItem.h"
 
-@class TLBusHomeHeaderItem;
 @interface TLBusHomeHeader()
 
-
 @property (nonatomic, strong) LTBaseView *vBack;
-@property (nonatomic, strong) LTBaseView *vBack;
+@property (nonatomic, strong) UIImageView *ivBus;
+@property (nonatomic, strong) UIImageView *ivLocation;
 @property (nonatomic, strong) TLBusHomeHeaderItem *itemBus;
 @property (nonatomic, strong) TLBusHomeHeaderItem *itemBusStation;
 
@@ -21,77 +21,51 @@
 
 @implementation TLBusHomeHeader
 
-
-@end
-
-
-//**********************************************************
-// MARK : Class == TLBusHomeHeaderItem
-//**********************************************************
-
-@interface TLBusHomeHeaderItem : LTBaseView
-
-@property (nonatomic, strong) LTBaseView       *hLine;
-@property (nonatomic, strong) UITextField      *tf;
-@property (nonatomic, strong) UIImageView      *ivArrow;
-@property (nonatomic, strong) UILabel          *lbTitle;
-
-@end
-
-@implementation TLBusHomeHeaderItem
-
 - (void)bindView {
     
-    [self lt_addSubViews:@[self.lbTitle,
-                           self.tf,
-                           self.ivArrow,
-                           self.hLine]];
 }
 
 - (void)bindLayout {
     
-    [self.lbTitle mas_remakeConstraints:^(MASConstraintMaker *make) {
-        
-    }];
+}
+
+- (void)bindAction {
     
-    [self.tf mas_remakeConstraints:^(MASConstraintMaker *make) {
-        
-    }];
-    
-    [self.ivArrow mas_remakeConstraints:^(MASConstraintMaker *make) {
-        
-    }];
-    
-    [self.hLine mas_remakeConstraints:^(MASConstraintMaker *make) {
-        
-    }];
 }
 
-- (LTBaseView *)hLine {
-    if (!_hLine) {
-        _hLine = [LTBaseView new];
+- (LTBaseView *)vBack {
+    if (!_vBack) {
+        _vBack = [LTBaseView new];
     }
-    return _hLine;
+    return _vBack;
 }
 
-- (UITextField *)tf {
-    if (!_tf) {
-        _tf = [UITextField new];
+- (UIImageView *)ivBus {
+    if (!_ivBus) {
+        _ivBus = [UIImageView new];
     }
-    return _tf;
+    return _ivBus;
 }
 
-- (UIImageView *)ivArrow {
-    if (!_ivArrow) {
-        _ivArrow = [UIImageView new];
+- (UIImageView *)ivLocation {
+    if (!_ivLocation) {
+        _ivLocation = [UIImageView new];
     }
-    return _ivArrow;
+    return _ivLocation;
 }
 
-- (UILabel *)lbTitle {
-    if (!_lbTitle) {
-        _lbTitle = [UILabel new];
+- (TLBusHomeHeaderItem *)itemBus {
+    if (!_itemBus) {
+        _itemBus = [TLBusHomeHeaderItem new];
     }
-    return _lbTitle;
+    return _itemBus;
 }
+
+- (TLBusHomeHeaderItem *)itemBusStation {
+    if (!_itemBusStation) {
+        _itemBusStation = [TLBusHomeHeaderItem new];
+    }
+    return _itemBusStation;
+}
+
 @end
