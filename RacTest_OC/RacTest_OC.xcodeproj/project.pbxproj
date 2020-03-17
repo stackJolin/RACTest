@@ -16,6 +16,7 @@
 		6D51EA93242073D900A233E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D51EA92242073D900A233E0 /* main.m */; };
 		8980D29F242108EF00C74FB8 /* LTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8980D29E242108EF00C74FB8 /* LTBaseView.m */; };
 		8980D2A4242109A100C74FB8 /* LTBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8980D2A3242109A100C74FB8 /* LTBaseVC.m */; };
+		8980D2A624210D8A00C74FB8 /* API.md in Resources */ = {isa = PBXBuildFile; fileRef = 8980D2A524210D8A00C74FB8 /* API.md */; };
 		A29BD8639AECC6B2C5628BA5 /* libPods-RacTest_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDDEB948B8C2570FE1B8FF0 /* libPods-RacTest_OC.a */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		8980D29E242108EF00C74FB8 /* LTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBaseView.m; sourceTree = "<group>"; };
 		8980D2A2242109A100C74FB8 /* LTBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBaseVC.h; sourceTree = "<group>"; };
 		8980D2A3242109A100C74FB8 /* LTBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBaseVC.m; sourceTree = "<group>"; };
+		8980D2A524210D8A00C74FB8 /* API.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = API.md; sourceTree = "<group>"; };
 		A6A33C69A95972FC23804455 /* Pods-RacTest_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacTest_OC.release.xcconfig"; path = "Target Support Files/Pods-RacTest_OC/Pods-RacTest_OC.release.xcconfig"; sourceTree = "<group>"; };
 		F67A634A227F7CA088AA2560 /* Pods-RacTest_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacTest_OC.debug.xcconfig"; path = "Target Support Files/Pods-RacTest_OC/Pods-RacTest_OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				6D51EA8E242073D900A233E0 /* LaunchScreen.storyboard */,
 				6D51EA91242073D900A233E0 /* Info.plist */,
 				6D51EA92242073D900A233E0 /* main.m */,
+				8980D2A524210D8A00C74FB8 /* API.md */,
 			);
 			path = RacTest_OC;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				6D51EA90242073D900A233E0 /* LaunchScreen.storyboard in Resources */,
 				6D51EA8D242073D900A233E0 /* Assets.xcassets in Resources */,
 				6D51EA8B242073D400A233E0 /* Main.storyboard in Resources */,
+				8980D2A624210D8A00C74FB8 /* API.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
