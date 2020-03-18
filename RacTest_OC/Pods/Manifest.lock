@@ -14,29 +14,52 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - IQKeyboardManager (6.5.5)
+  - JSONModel (1.7.0)
   - Masonry (1.1.0)
   - ReactiveObjC (3.1.0)
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDB (1.0.7.5):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
 
 DEPENDENCIES:
   - AFNetworking (from `../AFNetworking/`)
+  - IQKeyboardManager
+  - JSONModel (from `../JSONModel/`)
   - Masonry
   - ReactiveObjC (from `../ReactiveObjC/`)
+  - WCDB (from `../wcdb-1.0.8.2/`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - IQKeyboardManager
     - Masonry
+    - SQLiteRepairKit
+    - WCDBOptimizedSQLCipher
 
 EXTERNAL SOURCES:
   AFNetworking:
     :path: "../AFNetworking/"
+  JSONModel:
+    :path: "../JSONModel/"
   ReactiveObjC:
     :path: "../ReactiveObjC/"
+  WCDB:
+    :path: "../wcdb-1.0.8.2/"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
+  WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
 
-PODFILE CHECKSUM: f662f9d601e57cc3eba9e96b87796bf3e851ec63
+PODFILE CHECKSUM: 8a112121a403e6fc59be499cb35c702bde5359fc
 
 COCOAPODS: 1.8.3

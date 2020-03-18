@@ -14,6 +14,11 @@
 		6D51EA8D242073D900A233E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D51EA8C242073D900A233E0 /* Assets.xcassets */; };
 		6D51EA90242073D900A233E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D51EA8E242073D900A233E0 /* LaunchScreen.storyboard */; };
 		6D51EA93242073D900A233E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D51EA92242073D900A233E0 /* main.m */; };
+		6D51EA9F2421A9E500A233E0 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D51EA9D2421A6AB00A233E0 /* UIView+Frame.m */; };
+		6D51EAA42421ACA900A233E0 /* LTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D51EAA32421ACA900A233E0 /* LTNetworkManager.m */; };
+		6D51EAA72421ACB700A233E0 /* LTNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D51EAA62421ACB700A233E0 /* LTNetworkRequest.m */; };
+		6D51EAAF2421AD7F00A233E0 /* TLBusLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D51EAAD2421AD7F00A233E0 /* TLBusLineModel.m */; };
+		6D51EAB22421AD9300A233E0 /* LTBusHomeVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D51EAB12421AD9300A233E0 /* LTBusHomeVM.m */; };
 		8980D29F242108EF00C74FB8 /* LTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8980D29E242108EF00C74FB8 /* LTBaseView.m */; };
 		8980D2A4242109A100C74FB8 /* LTBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8980D2A3242109A100C74FB8 /* LTBaseVC.m */; };
 		8980D2A624210D8A00C74FB8 /* API.md in Resources */ = {isa = PBXBuildFile; fileRef = 8980D2A524210D8A00C74FB8 /* API.md */; };
@@ -38,6 +43,24 @@
 		6D51EA8F242073D900A233E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D51EA91242073D900A233E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D51EA92242073D900A233E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D51EA9B2421A65300A233E0 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		6D51EA9C2421A6AB00A233E0 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		6D51EA9D2421A6AB00A233E0 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		6D51EAA22421ACA800A233E0 /* LTNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTNetworkManager.h; sourceTree = "<group>"; };
+		6D51EAA32421ACA900A233E0 /* LTNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTNetworkManager.m; sourceTree = "<group>"; };
+		6D51EAA52421ACB700A233E0 /* LTNetworkRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTNetworkRequest.h; sourceTree = "<group>"; };
+		6D51EAA62421ACB700A233E0 /* LTNetworkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTNetworkRequest.m; sourceTree = "<group>"; };
+		6D51EAAD2421AD7F00A233E0 /* TLBusLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLBusLineModel.m; sourceTree = "<group>"; };
+		6D51EAAE2421AD7F00A233E0 /* TLBusLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLBusLineModel.h; sourceTree = "<group>"; };
+		6D51EAB02421AD9300A233E0 /* LTBusHomeVM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBusHomeVM.h; sourceTree = "<group>"; };
+		6D51EAB12421AD9300A233E0 /* LTBusHomeVM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBusHomeVM.m; sourceTree = "<group>"; };
+		6D51EAB42421AE1400A233E0 /* LTScreenMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTScreenMacro.h; sourceTree = "<group>"; };
+		6D51EAB52421AF5A00A233E0 /* LTLazyMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTLazyMacro.h; sourceTree = "<group>"; };
+		6D51EAB62421AF9200A233E0 /* LTLogMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTLogMacro.h; sourceTree = "<group>"; };
+		6D51EAB72421AFE700A233E0 /* LTDeviceMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTDeviceMacro.h; sourceTree = "<group>"; };
+		6D51EAB82421B0CF00A233E0 /* LTMemoryMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTMemoryMacro.h; sourceTree = "<group>"; };
+		6D51EAB92421B1B500A233E0 /* LTMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTMacro.h; sourceTree = "<group>"; };
+		6D51EABA2421B77100A233E0 /* LTSingletonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTSingletonMacro.h; sourceTree = "<group>"; };
 		7DDDEB948B8C2570FE1B8FF0 /* libPods-RacTest_OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RacTest_OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8980D29D242108EF00C74FB8 /* LTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBaseView.h; sourceTree = "<group>"; };
 		8980D29E242108EF00C74FB8 /* LTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBaseView.m; sourceTree = "<group>"; };
@@ -93,6 +116,8 @@
 		6D51EA7F242073D400A233E0 /* RacTest_OC */ = {
 			isa = PBXGroup;
 			children = (
+				6D51EAA02421AB6F00A233E0 /* NetRequest */,
+				6D51EA992421A62E00A233E0 /* Common */,
 				8980D2A12421097C00C74FB8 /* Router */,
 				8980D29A242108B800C74FB8 /* LTCoreKit */,
 				8980D299242108A100C74FB8 /* LTUIKit */,
@@ -113,6 +138,63 @@
 			path = RacTest_OC;
 			sourceTree = "<group>";
 		};
+		6D51EA992421A62E00A233E0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6D51EAB42421AE1400A233E0 /* LTScreenMacro.h */,
+				6D51EAB52421AF5A00A233E0 /* LTLazyMacro.h */,
+				6D51EAB62421AF9200A233E0 /* LTLogMacro.h */,
+				6D51EAB72421AFE700A233E0 /* LTDeviceMacro.h */,
+				6D51EAB82421B0CF00A233E0 /* LTMemoryMacro.h */,
+				6D51EAB92421B1B500A233E0 /* LTMacro.h */,
+				6D51EABA2421B77100A233E0 /* LTSingletonMacro.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6D51EA9A2421A64300A233E0 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				6D51EA9B2421A65300A233E0 /* Header.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		6D51EAA02421AB6F00A233E0 /* NetRequest */ = {
+			isa = PBXGroup;
+			children = (
+				6D51EAA12421AC7900A233E0 /* Core */,
+			);
+			path = NetRequest;
+			sourceTree = "<group>";
+		};
+		6D51EAA12421AC7900A233E0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6D51EAA22421ACA800A233E0 /* LTNetworkManager.h */,
+				6D51EAA32421ACA900A233E0 /* LTNetworkManager.m */,
+				6D51EAA52421ACB700A233E0 /* LTNetworkRequest.h */,
+				6D51EAA62421ACB700A233E0 /* LTNetworkRequest.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		6D51EAA82421ACFB00A233E0 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				6D51EAB02421AD9300A233E0 /* LTBusHomeVM.h */,
+				6D51EAB12421AD9300A233E0 /* LTBusHomeVM.m */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		6D51EAB32421ADA600A233E0 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		8980D2942421041300C74FB8 /* Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +206,8 @@
 		8980D2952421044100C74FB8 /* Bus */ = {
 			isa = PBXGroup;
 			children = (
+				6D51EAB32421ADA600A233E0 /* Api */,
+				6D51EAA82421ACFB00A233E0 /* VM */,
 				8980D2982421084600C74FB8 /* View */,
 				8980D2972421046E00C74FB8 /* Model */,
 				8980D2962421046500C74FB8 /* VC */,
@@ -143,6 +227,8 @@
 		8980D2972421046E00C74FB8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6D51EAAE2421AD7F00A233E0 /* TLBusLineModel.h */,
+				6D51EAAD2421AD7F00A233E0 /* TLBusLineModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +258,7 @@
 		8980D29A242108B800C74FB8 /* LTCoreKit */ = {
 			isa = PBXGroup;
 			children = (
+				6D51EA9A2421A64300A233E0 /* Macro */,
 				8980D2B22421136000C74FB8 /* UIEx */,
 			);
 			path = LTCoreKit;
@@ -223,6 +310,8 @@
 			children = (
 				8980D2B32421137700C74FB8 /* UIView+Ex.h */,
 				8980D2B42421137700C74FB8 /* UIView+Ex.m */,
+				6D51EA9C2421A6AB00A233E0 /* UIView+Frame.h */,
+				6D51EA9D2421A6AB00A233E0 /* UIView+Frame.m */,
 			);
 			path = UIEx;
 			sourceTree = "<group>";
@@ -341,7 +430,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D51EAA72421ACB700A233E0 /* LTNetworkRequest.m in Sources */,
+				6D51EAA42421ACA900A233E0 /* LTNetworkManager.m in Sources */,
+				6D51EA9F2421A9E500A233E0 /* UIView+Frame.m in Sources */,
 				8980D29F242108EF00C74FB8 /* LTBaseView.m in Sources */,
+				6D51EAAF2421AD7F00A233E0 /* TLBusLineModel.m in Sources */,
 				8980D2A4242109A100C74FB8 /* LTBaseVC.m in Sources */,
 				8980D2B0242110D800C74FB8 /* TLBusHomeHeader.m in Sources */,
 				6D51EA88242073D400A233E0 /* ViewController.m in Sources */,
@@ -351,6 +444,7 @@
 				8980D2AD242110A100C74FB8 /* LTTable.m in Sources */,
 				6D51EA93242073D900A233E0 /* main.m in Sources */,
 				6D51EA85242073D400A233E0 /* SceneDelegate.m in Sources */,
+				6D51EAB22421AD9300A233E0 /* LTBusHomeVM.m in Sources */,
 				8980D2A924210F8500C74FB8 /* TLBusHomeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +586,7 @@
 			baseConfigurationReference = F67A634A227F7CA088AA2560 /* Pods-RacTest_OC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CV7MH8K7UH;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -502,8 +597,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.windimg.giantwatch.RacTest-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = www.zhuhoulin.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -513,6 +609,7 @@
 			baseConfigurationReference = A6A33C69A95972FC23804455 /* Pods-RacTest_OC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CV7MH8K7UH;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
@@ -523,8 +620,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.windimg.giantwatch.RacTest-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = www.zhuhoulin.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

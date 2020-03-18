@@ -4,13 +4,17 @@ platform :ios, '9.0'
 
 def all_pods
   pod 'Masonry'
+  pod 'IQKeyboardManager'
 #  pod 'ReactiveObjC'
+#  pod 'AFNetworking'
 #  pod 'WCDB'
+#  pod 'JSONModel'
+
+######################## Local ============================
   pod 'ReactiveObjC', :path => '../ReactiveObjC/'
   pod 'AFNetworking', :path => '../AFNetworking/'
-  pod 'AFNetworking', :path => '../WCDB/'
-  pod 'IQKeyBoardManager'
-  
+  pod 'WCDB', :path => '../wcdb-1.0.8.2/'
+  pod 'JSONModel', :path => '../JSONModel/'
 end
 
 target 'RacTest_OC' do

@@ -8,9 +8,7 @@
 
 #import "TLBusHomeHeaderItem.h"
 
-@interface TLBusHomeHeaderItem : LTBaseView
-
-
+@interface TLBusHomeHeaderItem()
 
 @end
 
