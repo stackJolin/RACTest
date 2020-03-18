@@ -61,6 +61,7 @@
 		6D51EAB82421B0CF00A233E0 /* LTMemoryMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTMemoryMacro.h; sourceTree = "<group>"; };
 		6D51EAB92421B1B500A233E0 /* LTMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTMacro.h; sourceTree = "<group>"; };
 		6D51EABA2421B77100A233E0 /* LTSingletonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTSingletonMacro.h; sourceTree = "<group>"; };
+		6D51EABB2421C77100A233E0 /* LTNetworkMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTNetworkMacro.h; sourceTree = "<group>"; };
 		7DDDEB948B8C2570FE1B8FF0 /* libPods-RacTest_OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RacTest_OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8980D29D242108EF00C74FB8 /* LTBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTBaseView.h; sourceTree = "<group>"; };
 		8980D29E242108EF00C74FB8 /* LTBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTBaseView.m; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		6D51EA7F242073D400A233E0 /* RacTest_OC */ = {
 			isa = PBXGroup;
 			children = (
+				6D51EABC2421CB3600A233E0 /* NetMonitor */,
 				6D51EAA02421AB6F00A233E0 /* NetRequest */,
 				6D51EA992421A62E00A233E0 /* Common */,
 				8980D2A12421097C00C74FB8 /* Router */,
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				6D51EAA12421AC7900A233E0 /* Core */,
+				6D51EABB2421C77100A233E0 /* LTNetworkMacro.h */,
 			);
 			path = NetRequest;
 			sourceTree = "<group>";
@@ -193,6 +196,13 @@
 			children = (
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		6D51EABC2421CB3600A233E0 /* NetMonitor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetMonitor;
 			sourceTree = "<group>";
 		};
 		8980D2942421041300C74FB8 /* Module */ = {

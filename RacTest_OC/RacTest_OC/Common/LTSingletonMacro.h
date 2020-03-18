@@ -13,25 +13,14 @@
 + (id)shared;
 
 #define SharedM \
-static  id _singletonInstance = nil; \
-+ (id)shared \
-{ \
-    return  [[self alloc] init]; \
-} \
-+ (id)allocWithZone:(NSZone *)zone \
++ (instance)shared \
 { \
     static dispatch_once_t onceToken; \
+    static  id _singletonInstance = nil; \
     dispatch_once(&onceToken, ^{ \
-     _singletonInstance = [super allocWithZone:zone]; \
+        _singletonInstance = [[self alloc] init]; \
     }); \
-   return _singletonInstance; \
-} \
-- (id)copyWithZone:(NSZone *)zone { \
     return _singletonInstance; \
-} \
-- (id)mutableCopyWithZone:(NSZone *)zone \
-{ \
-  return self; \
 } \
 
 #endif /* LTSingletonMacro_h */
