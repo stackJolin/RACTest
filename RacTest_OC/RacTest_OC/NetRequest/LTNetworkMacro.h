@@ -24,6 +24,8 @@ typedef void(^LTCancelHandler)();
 /** 完成回调 */
 typedef void(^LTFinishHandler)();
 
+
+
 /** 数据模型转换 */
 typedef id(^LTTurnModelHandle)(id obj);
 typedef id(^LTTurnModelWithDataHandle)(id data, id obj);
