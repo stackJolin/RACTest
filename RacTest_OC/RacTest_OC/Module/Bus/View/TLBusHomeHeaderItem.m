@@ -16,7 +16,7 @@
 
 - (void)bindView {
     
-    [self lt_addSubViews:@[self.lbTitle,
+    [self addSubViews:@[self.lbTitle,
                            self.tf,
                            self.ivArrow,
                            self.hLine]];
@@ -25,20 +25,31 @@
 - (void)bindLayout {
     
     [self.lbTitle mas_remakeConstraints:^(MASConstraintMaker *make) {
-        
+        make.left.mas_equalTo(ScaleW(15));
+        make.right.mas_equalTo(-ScaleW(15));
+        make.top.bottom.equalTo(self);
     }];
     
     [self.tf mas_remakeConstraints:^(MASConstraintMaker *make) {
-        
+        make.left.equalTo(self.lbTitle.mas_right).offset(10);
+        make.top.bottom.equalTo(self.lbTitle);
     }];
     
     [self.ivArrow mas_remakeConstraints:^(MASConstraintMaker *make) {
-        
+        make.right.mas_equalTo(-ScaleW(15));
+        make.width.height.mas_equalTo(ScaleW(20));
+        make.centerY.equalTo(self);
     }];
     
     [self.hLine mas_remakeConstraints:^(MASConstraintMaker *make) {
-        
+        make.height.mas_equalTo(0.5);
+        make.left.mas_equalTo(ScaleW(15));
+        make.right.mas_equalTo(ScaleW(15));
+        make.bottom.equalTo(self);
     }];
+}
+
+- (void)bindAction {
 }
 
 - (LTBaseView *)hLine {
@@ -68,4 +79,5 @@
     }
     return _lbTitle;
 }
+
 @end

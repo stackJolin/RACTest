@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TLBusHomeVC : LTBaseVC
+@interface TLBusHomeVC : TLBaseVC
 
 @end
 

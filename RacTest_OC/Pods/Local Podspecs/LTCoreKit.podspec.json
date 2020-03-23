@@ -1,0 +1,27 @@
+{
+  "name": "LTCoreKit",
+  "version": "0.1.0",
+  "summary": "A short description of LTCoreKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/stackjolin/LTCoreKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "stackjolin": "zhuhoulin@windimg.com"
+  },
+  "source": {
+    "git": "https://github.com/stackjolin/LTCoreKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "LTCoreKit/Classes/**/*",
+  "public_header_files": "LTCoreKit/Classes/**/*.h",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ]
+}
