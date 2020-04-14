@@ -272,6 +272,7 @@
 - (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock {
 	NSCParameterAssert(nextBlock != NULL);
 	
+    // 根据入参函数(Block)创建了一个订阅者，订阅者保存了入参函数
 	RACSubscriber *o = [RACSubscriber subscriberWithNext:nextBlock error:NULL completed:NULL];
 	return [self subscribe:o];
 }

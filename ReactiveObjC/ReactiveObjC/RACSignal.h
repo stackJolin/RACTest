@@ -338,7 +338,7 @@ typedef RACSignal * _Nullable (^RACSignalBindBlock)(ValueType _Nullable value, B
 ///          return @(previous.integerValue + next.integerValue);
 ///      }];
 ///
-/// Returns a new signal consisting of the return values from each application of
+/// Returns a new signal consisting of the return values from eahttps://git.windimg.com/giantbank/bank-ios/-/merge_requests/2683ch application of
 /// `reduceBlock`.
 - (RACSignal *)combinePreviousWithStart:(nullable ValueType)start reduce:(id _Nullable (^)(ValueType _Nullable previous, ValueType _Nullable current))reduceBlock RAC_WARN_UNUSED_RESULT;
 
@@ -369,7 +369,7 @@ typedef RACSignal * _Nullable (^RACSignalBindBlock)(ValueType _Nullable value, B
 /// initial values passing `predicate`. If `predicate` never returns `NO`, an
 /// empty signal is returned.
 - (RACSignal<ValueType> *)skipWhileBlock:(BOOL (^)(ValueType _Nullable x))predicate RAC_WARN_UNUSED_RESULT;
-
+https://git.windimg.com/giantbank/bank-ios/-/merge_requests/2683
 /// Returns a signal of values for which -isEqual: returns NO when compared to the
 /// previous value.
 - (RACSignal<ValueType> *)distinctUntilChanged RAC_WARN_UNUSED_RESULT;

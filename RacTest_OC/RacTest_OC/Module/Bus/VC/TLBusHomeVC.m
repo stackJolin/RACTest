@@ -22,6 +22,33 @@
     self.view.backgroundColor = UIColor.whiteColor;
     [self.view addSubview:self.vTable];
     self.vTable.tableHeaderView = self.vHeader;
+    
+    
+    RACSignal *s = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        
+        [subscriber sendNext:@(0)];
+       
+        [subscriber sendError:nil];
+        
+        [subscriber sendCompleted];
+        
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"订阅被取消了");
+        }];
+    }];
+    
+    // 订阅
+    [s subscribeNext:^(id  _Nullable x) {
+        
+    }];
+    
+    [s subscribeError:^(NSError * _Nullable error) {
+        
+    }];
+    
+    [s subscribeCompleted:^{
+        
+    }];
 }
 
 - (void)bindLayout {
