@@ -45,6 +45,7 @@ NSString * const RACSchedulerCurrentSchedulerKey = @"RACSchedulerCurrentSchedule
 
 #pragma mark Schedulers
 
+// 立即调度器，block任务会被立即调用
 + (RACScheduler *)immediateScheduler {
 	static dispatch_once_t onceToken;
 	static RACScheduler *immediateScheduler;
@@ -55,6 +56,7 @@ NSString * const RACSchedulerCurrentSchedulerKey = @"RACSchedulerCurrentSchedule
 	return immediateScheduler;
 }
 
+// 主线程调度器
 + (RACScheduler *)mainThreadScheduler {
 	static dispatch_once_t onceToken;
 	static RACScheduler *mainThreadScheduler;
@@ -93,7 +95,9 @@ NSString * const RACSchedulerCurrentSchedulerKey = @"RACSchedulerCurrentSchedule
 
 + (RACScheduler *)currentScheduler {
 	RACScheduler *scheduler = NSThread.currentThread.threadDictionary[RACSchedulerCurrentSchedulerKey];
+    
 	if (scheduler != nil) return scheduler;
+    
 	if ([self.class isOnMainThread]) return RACScheduler.mainThreadScheduler;
 
 	return nil;
@@ -196,7 +200,7 @@ NSString * const RACSchedulerCurrentSchedulerKey = @"RACSchedulerCurrentSchedule
 
 	RACScheduler *previousScheduler = RACScheduler.currentScheduler;
 	NSThread.currentThread.threadDictionary[RACSchedulerCurrentSchedulerKey] = self;
-
+    
 	@autoreleasepool {
 		block();
 	}

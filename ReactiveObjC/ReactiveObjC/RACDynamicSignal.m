@@ -33,13 +33,17 @@
 
 #pragma mark Managing Subscribers
 
+/// 给信号添加订阅者
 - (RACDisposable *)subscribe:(id<RACSubscriber>)subscriber {
 	NSCParameterAssert(subscriber != nil);
 
 	RACCompoundDisposable *disposable = [RACCompoundDisposable compoundDisposable];
+    
+    // 真正订阅信号的订阅者
 	subscriber = [[RACPassthroughSubscriber alloc] initWithSubscriber:subscriber signal:self disposable:disposable];
     
-	if (self.didSubscribe != NULL) {
+	if (self.didSubscribe != NULL) { // 如果信号存在事件
+        // 调度器会调度执行block
 		RACDisposable *schedulingDisposable = [RACScheduler.subscriptionScheduler schedule:^{
 			RACDisposable *innerDisposable = self.didSubscribe(subscriber);
 			[disposable addDisposable:innerDisposable];

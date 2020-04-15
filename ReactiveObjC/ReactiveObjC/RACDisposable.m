@@ -34,6 +34,7 @@
 - (instancetype)init {
 	self = [super init];
 
+    // 如果没有block，block会指向自己。为了避免循环引用，这里使用了void *，如果使用id，那么会造成循环引用
 	_disposeBlock = (__bridge void *)self;
 	OSMemoryBarrier();
 
@@ -64,9 +65,12 @@
 }
 
 - (void)dealloc {
+    // 为空 或者 等于 自身，都不需要额外的释放或者设置为NULL
 	if (_disposeBlock == NULL || _disposeBlock == (__bridge void *)self) return;
 
+    // 释放内存
 	CFRelease(_disposeBlock);
+    // 避免野指针
 	_disposeBlock = NULL;
 }
 
@@ -77,8 +81,13 @@
 
 	while (YES) {
 		void *blockPtr = _disposeBlock;
+        
 		if (OSAtomicCompareAndSwapPtrBarrier(blockPtr, NULL, &_disposeBlock)) {
+            // 如果block存在
 			if (blockPtr != (__bridge void *)self) {
+                // __bridge                             内存管理者不切换
+                // __bridge_transfer/CFBridgingRelease  内存管理者进行切换   把CF对象转换成NS对象，并且内存管理者切换
+                // __bridge_retained/CFBridgingRetain   内存管理者进行切换   把NS对象转换成CF对象，并且内存管理者切换
 				disposeBlock = CFBridgingRelease(blockPtr);
 			}
 
@@ -86,6 +95,7 @@
 		}
 	}
 
+    // ARC下的block，执行完毕后会自动释放
 	if (disposeBlock != nil) disposeBlock();
 }
 

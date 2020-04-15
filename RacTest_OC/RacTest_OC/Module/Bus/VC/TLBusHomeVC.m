@@ -37,15 +37,26 @@
         }];
     }];
     
-    // 订阅
+    // 一次性添加三个事件(next，error，completed)的订阅者，这种只是创建了一个订阅者
+    [s subscribeNext:^(id  _Nullable x) {
+        
+    } error:^(NSError * _Nullable error) {
+        
+    } completed:^{
+        
+    }];
+    
+    // 添加Next事件的订阅者
     [s subscribeNext:^(id  _Nullable x) {
         
     }];
     
+    // 添加Error事件的订阅者
     [s subscribeError:^(NSError * _Nullable error) {
         
     }];
     
+    // 添加Completed事件的订阅者
     [s subscribeCompleted:^{
         
     }];

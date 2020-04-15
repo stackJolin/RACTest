@@ -117,16 +117,19 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 
 - (void)dealloc {
 	#if RACCompoundDisposableInlineCount
+    // 清理所有清洁工，每个清洁工都会自动销毁
 	for (unsigned i = 0; i < RACCompoundDisposableInlineCount; i++) {
 		_inlineDisposables[i] = nil;
 	}
 	#endif
 
 	if (_disposables != NULL) {
+        // 释放清洁工数组
 		CFRelease(_disposables);
 		_disposables = NULL;
 	}
 
+    // 销毁这个互斥锁
 	const int result __attribute__((unused)) = pthread_mutex_destroy(&_mutex);
 	NSCAssert(0 == result, @"Failed to destroy mutex with error %d.", result);
 }
@@ -139,6 +142,7 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 
 	BOOL shouldDispose = NO;
 
+    // 保证_disposables数据的线程安全
 	pthread_mutex_lock(&_mutex);
 	{
 		if (_disposed) {
@@ -175,6 +179,7 @@ static CFMutableArrayRef RACCreateDisposablesArray(void) {
 - (void)removeDisposable:(RACDisposable *)disposable {
 	if (disposable == nil) return;
 
+    // 保证_disposables数据的线程安全
 	pthread_mutex_lock(&_mutex);
 	{
 		if (!_disposed) {
@@ -214,6 +219,8 @@ static void disposeEach(const void *value, void *context) {
 	RACDisposable *inlineCopy[RACCompoundDisposableInlineCount];
 	#endif
 
+    // TODO: 朱厚霖 这里是怎么做内存释放的
+    
 	CFArrayRef remainingDisposables = NULL;
 
 	pthread_mutex_lock(&_mutex);
