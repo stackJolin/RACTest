@@ -144,7 +144,7 @@
 		@autoreleasepool {
 			RACSerialDisposable *selfDisposable = [[RACSerialDisposable alloc] init];
 			[compoundDisposable addDisposable:selfDisposable];
-
+            
 			RACDisposable *bindingDisposable = [self subscribeNext:^(id x) {
 				// Manually check disposal to handle synchronous errors.
 				if (compoundDisposable.disposed) return;

@@ -28,12 +28,17 @@ PODS:
   - Masonry (1.1.0)
   - MJRefresh (3.3.1)
   - ReactiveObjC (3.1.0)
+  - SDWebImage (5.7.2):
+    - SDWebImage/Core (= 5.7.2)
+  - SDWebImage/Core (5.7.2)
   - SQLiteRepairKit (1.2.2):
     - WCDBOptimizedSQLCipher (~> 1.2.0)
   - WCDB (1.0.7.5):
     - SQLiteRepairKit (~> 1.2.0)
     - WCDBOptimizedSQLCipher (~> 1.2.0)
   - WCDBOptimizedSQLCipher (1.2.1)
+  - YYCache (1.0.4)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (from `../AFNetworking/`)
@@ -48,7 +53,10 @@ DEPENDENCIES:
   - Masonry
   - MJRefresh (from `../MJRefresh-3.3.1/`)
   - ReactiveObjC (from `../ReactiveObjC/`)
+  - SDWebImage (from `../SDWebImage/`)
   - WCDB (from `../wcdb-1.0.8.2/`)
+  - YYCache (from `../YYCache/`)
+  - YYModel (from `../YYModel/`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -78,8 +86,14 @@ EXTERNAL SOURCES:
     :path: "../MJRefresh-3.3.1/"
   ReactiveObjC:
     :path: "../ReactiveObjC/"
+  SDWebImage:
+    :path: "../SDWebImage/"
   WCDB:
     :path: "../wcdb-1.0.8.2/"
+  YYCache:
+    :path: "../YYCache/"
+  YYModel:
+    :path: "../YYModel/"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -94,10 +108,13 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SDWebImage: d9ea4959d99c52276dfada481987018fcaea3d58
   SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
   WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 63becbc004b826dfb5cb13978a1a84d64b1ad376
+PODFILE CHECKSUM: e1e16cf119fb7ee190adc94c6537d126378c510d
 
 COCOAPODS: 1.8.3

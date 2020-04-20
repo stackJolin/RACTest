@@ -17,6 +17,9 @@ def all_pods
   pod 'WCDB', :path => '../wcdb-1.0.8.2/'
   pod 'MJRefresh', :path => '../MJRefresh-3.3.1/'
   pod 'JSONModel', :path => '../JSONModel/'
+  pod 'YYModel', :path => '../YYModel/'
+  pod 'YYCache', :path => '../YYCache/'
+  pod 'SDWebImage', :path => '../SDWebImage/'
   
 ######################## CommonLib ========================
   pod 'LTCoreKit', :path => '../../LTCoreKit/'
