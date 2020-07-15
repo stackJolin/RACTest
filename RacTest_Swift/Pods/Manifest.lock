@@ -1,0 +1,31 @@
+PODS:
+  - Codextended (0.2.0)
+  - HandyJSON (5.0.2)
+  - ObjectMapper (4.2.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Codextended (from `../Codextended`)
+  - HandyJSON (from `../HandyJSON`)
+  - ObjectMapper (from `../ObjectMapper/`)
+  - SwiftyJSON (from `../SwiftyJSON`)
+
+EXTERNAL SOURCES:
+  Codextended:
+    :path: "../Codextended"
+  HandyJSON:
+    :path: "../HandyJSON"
+  ObjectMapper:
+    :path: "../ObjectMapper/"
+  SwiftyJSON:
+    :path: "../SwiftyJSON"
+
+SPEC CHECKSUMS:
+  Codextended: 9974c2ce5c3f2191c75aebaf88172b852482c06f
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  ObjectMapper: 5a6c9f063ef67e7fc0d7eb8958919e3121396a96
+  SwiftyJSON: f0574c07d8ca1644050db687067209e3033a89a0
+
+PODFILE CHECKSUM: 61701a3bd82c8800a3b502327f4f8b112ab89e79
+
+COCOAPODS: 1.8.3

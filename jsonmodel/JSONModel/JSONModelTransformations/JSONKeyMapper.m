@@ -13,8 +13,7 @@
 
 @implementation JSONKeyMapper
 
-- (instancetype)init
-{
+- (instancetype)init {
     if (!(self = [super init]))
         return nil;
 
@@ -23,8 +22,7 @@
     return self;
 }
 
-- (instancetype)initWithJSONToModelBlock:(JSONModelKeyMapBlock)toModel modelToJSONBlock:(JSONModelKeyMapBlock)toJSON
-{
+- (instancetype)initWithJSONToModelBlock:(JSONModelKeyMapBlock)toModel modelToJSONBlock:(JSONModelKeyMapBlock)toJSON {
     return [self initWithModelToJSONBlock:toJSON];
 }
 

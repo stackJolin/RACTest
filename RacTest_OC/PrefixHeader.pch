@@ -9,7 +9,8 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <Masonry/Masonry.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <AFNetworking/AFNetworking.h>

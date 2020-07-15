@@ -223,6 +223,7 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
 - (BOOL)evaluateServerTrust:(SecTrustRef)serverTrust
                   forDomain:(NSString *)domain
 {
+    // 这里是判断服务器自签名证书。证书分为CA权威机构颁发的证书以及服务器自签名证书
     if (domain && self.allowInvalidCertificates && self.validatesDomainName && (self.SSLPinningMode == AFSSLPinningModeNone || [self.pinnedCertificates count] == 0)) {
         // https://developer.apple.com/library/mac/documentation/NetworkingInternet/Conceptual/NetworkingTopics/Articles/OverridingSSLChainValidationCorrectly.html
         //  According to the docs, you should only trust your provided certs for evaluation.
@@ -239,7 +240,8 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
     NSMutableArray *policies = [NSMutableArray array];
     if (self.validatesDomainName) {
         [policies addObject:(__bridge_transfer id)SecPolicyCreateSSL(true, (__bridge CFStringRef)domain)];
-    } else {
+    }
+    else {
         [policies addObject:(__bridge_transfer id)SecPolicyCreateBasicX509()];
     }
 
@@ -252,10 +254,10 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
     }
 
     switch (self.SSLPinningMode) {
-        case AFSSLPinningModeNone:
+        case AFSSLPinningModeNone: // 表示服务端使用的是CA机构签发的正式证书
         default:
             return NO;
-        case AFSSLPinningModeCertificate: {
+        case AFSSLPinningModeCertificate: { // 表示的是服务器端自签名证书表示客户端需要保存一个服务端根证书，用于验证服务端证书是否合法。客户端需要将服务端证书的证书链上的任意一个证书拖入xcode工程中。
             NSMutableArray *pinnedCertificates = [NSMutableArray array];
             for (NSData *certificateData in self.pinnedCertificates) {
                 [pinnedCertificates addObject:(__bridge_transfer id)SecCertificateCreateWithData(NULL, (__bridge CFDataRef)certificateData)];
@@ -277,7 +279,7 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
             
             return NO;
         }
-        case AFSSLPinningModePublicKey: {
+        case AFSSLPinningModePublicKey: { // 表示的是服务器自签名证书。表示客户端需要保存一个服务端根证书公钥，用于验证服务端证书是否合法。客户端需要将服务端证书链上的任意一证书的公钥拖入xcode工程中。使用公钥验证，则需要从服务端证书中取出公钥，同时取出客户端中保存的公钥，逐一比较，如果有匹配的就认为验证成功。
             NSUInteger trustedPublicKeyCount = 0;
             NSArray *publicKeys = AFPublicKeyTrustChainForServerTrust(serverTrust);
 

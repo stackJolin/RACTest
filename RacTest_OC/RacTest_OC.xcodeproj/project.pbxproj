@@ -17,12 +17,15 @@
 		8980D2A924210F8500C74FB8 /* TLBusHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8980D2A824210F8500C74FB8 /* TLBusHomeVC.m */; };
 		8980D2B0242110D800C74FB8 /* TLBusHomeHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8980D2AF242110D800C74FB8 /* TLBusHomeHeader.m */; };
 		8980D2BA24211A1E00C74FB8 /* TLBusHomeHeaderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8980D2B924211A1E00C74FB8 /* TLBusHomeHeaderItem.m */; };
+		898C851124AC613D00F0706E /* KVCTestObject1.m in Sources */ = {isa = PBXBuildFile; fileRef = 898C851024AC613D00F0706E /* KVCTestObject1.m */; };
+		898C851824ACB2AC00F0706E /* JsonModelObj1.m in Sources */ = {isa = PBXBuildFile; fileRef = 898C851724ACB2AC00F0706E /* JsonModelObj1.m */; };
 		8993A5832425F0AF0053F89C /* UIView+Ges.m in Sources */ = {isa = PBXBuildFile; fileRef = 8993A5822425F0AF0053F89C /* UIView+Ges.m */; };
 		8993A5862425F2D80053F89C /* UIGestureRecognizer+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8993A5852425F2D80053F89C /* UIGestureRecognizer+BlocksKit.m */; };
 		8993A5892425F2E10053F89C /* UIView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8993A5872425F2E10053F89C /* UIView+BlocksKit.m */; };
 		8993A58C2425F2EA0053F89C /* UIControl+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8993A58A2425F2EA0053F89C /* UIControl+BlocksKit.m */; };
 		8993A590242603E10053F89C /* TLBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8993A58F242603E10053F89C /* TLBaseVC.m */; };
 		8993A5A224285C240053F89C /* UIView+Associate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8993A5A124285C240053F89C /* UIView+Associate.m */; };
+		89D0580924AD8AC000464F11 /* MJExtensionObj1.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D0580824AD8AC000464F11 /* MJExtensionObj1.m */; };
 		A29BD8639AECC6B2C5628BA5 /* libPods-RacTest_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDDEB948B8C2570FE1B8FF0 /* libPods-RacTest_OC.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +50,10 @@
 		8980D2B7242115CB00C74FB8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		8980D2B824211A1E00C74FB8 /* TLBusHomeHeaderItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLBusHomeHeaderItem.h; sourceTree = "<group>"; };
 		8980D2B924211A1E00C74FB8 /* TLBusHomeHeaderItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLBusHomeHeaderItem.m; sourceTree = "<group>"; };
+		898C850F24AC613D00F0706E /* KVCTestObject1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCTestObject1.h; sourceTree = "<group>"; };
+		898C851024AC613D00F0706E /* KVCTestObject1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCTestObject1.m; sourceTree = "<group>"; };
+		898C851624ACB2AC00F0706E /* JsonModelObj1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JsonModelObj1.h; sourceTree = "<group>"; };
+		898C851724ACB2AC00F0706E /* JsonModelObj1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JsonModelObj1.m; sourceTree = "<group>"; };
 		8993A5812425F0AF0053F89C /* UIView+Ges.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Ges.h"; sourceTree = "<group>"; };
 		8993A5822425F0AF0053F89C /* UIView+Ges.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ges.m"; sourceTree = "<group>"; };
 		8993A5842425F2D80053F89C /* UIGestureRecognizer+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+BlocksKit.h"; sourceTree = "<group>"; };
@@ -59,6 +66,8 @@
 		8993A58F242603E10053F89C /* TLBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLBaseVC.m; sourceTree = "<group>"; };
 		8993A5A024285C240053F89C /* UIView+Associate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Associate.h"; sourceTree = "<group>"; };
 		8993A5A124285C240053F89C /* UIView+Associate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Associate.m"; sourceTree = "<group>"; };
+		89D0580724AD8AC000464F11 /* MJExtensionObj1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJExtensionObj1.h; sourceTree = "<group>"; };
+		89D0580824AD8AC000464F11 /* MJExtensionObj1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJExtensionObj1.m; sourceTree = "<group>"; };
 		A6A33C69A95972FC23804455 /* Pods-RacTest_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacTest_OC.release.xcconfig"; path = "Target Support Files/Pods-RacTest_OC/Pods-RacTest_OC.release.xcconfig"; sourceTree = "<group>"; };
 		F67A634A227F7CA088AA2560 /* Pods-RacTest_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacTest_OC.debug.xcconfig"; path = "Target Support Files/Pods-RacTest_OC/Pods-RacTest_OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +106,11 @@
 		6D51EA7F242073D400A233E0 /* RacTest_OC */ = {
 			isa = PBXGroup;
 			children = (
+				89D0580624AD8A7600464F11 /* MJExtension */,
+				898C851524ACB29000F0706E /* JSONModelTest */,
+				898C850E24AB2D4900F0706E /* KVCTest */,
+				898C850D24AB2D4400F0706E /* KVOTest */,
+				892F54B9248E05DD008A1928 /* Test */,
 				6D51EA992421A62E00A233E0 /* Common */,
 				8980D2942421041300C74FB8 /* Module */,
 				6D51EA80242073D400A233E0 /* AppDelegate.h */,
@@ -142,6 +156,13 @@
 			children = (
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		892F54B9248E05DD008A1928 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 		8980D2942421041300C74FB8 /* Module */ = {
@@ -194,6 +215,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		898C850D24AB2D4400F0706E /* KVOTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KVOTest;
+			sourceTree = "<group>";
+		};
+		898C850E24AB2D4900F0706E /* KVCTest */ = {
+			isa = PBXGroup;
+			children = (
+				898C850F24AC613D00F0706E /* KVCTestObject1.h */,
+				898C851024AC613D00F0706E /* KVCTestObject1.m */,
+			);
+			path = KVCTest;
+			sourceTree = "<group>";
+		};
+		898C851524ACB29000F0706E /* JSONModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				898C851624ACB2AC00F0706E /* JsonModelObj1.h */,
+				898C851724ACB2AC00F0706E /* JsonModelObj1.m */,
+			);
+			path = JSONModelTest;
+			sourceTree = "<group>";
+		};
 		8993A58D242603BD0053F89C /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +254,15 @@
 			children = (
 			);
 			path = BlocksKit;
+			sourceTree = "<group>";
+		};
+		89D0580624AD8A7600464F11 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				89D0580724AD8AC000464F11 /* MJExtensionObj1.h */,
+				89D0580824AD8AC000464F11 /* MJExtensionObj1.m */,
+			);
+			path = MJExtension;
 			sourceTree = "<group>";
 		};
 		AE02D2BE6B58265AD4399AA8 /* Pods */ = {
@@ -344,6 +399,7 @@
 				6D51EAAF2421AD7F00A233E0 /* TLBusLineModel.m in Sources */,
 				8980D2B0242110D800C74FB8 /* TLBusHomeHeader.m in Sources */,
 				8993A5A224285C240053F89C /* UIView+Associate.m in Sources */,
+				898C851824ACB2AC00F0706E /* JsonModelObj1.m in Sources */,
 				6D51EA82242073D400A233E0 /* AppDelegate.m in Sources */,
 				8993A5832425F0AF0053F89C /* UIView+Ges.m in Sources */,
 				8993A58C2425F2EA0053F89C /* UIControl+BlocksKit.m in Sources */,
@@ -352,6 +408,8 @@
 				6D51EA93242073D900A233E0 /* main.m in Sources */,
 				6D51EAB22421AD9300A233E0 /* LTBusHomeVM.m in Sources */,
 				8993A590242603E10053F89C /* TLBaseVC.m in Sources */,
+				89D0580924AD8AC000464F11 /* MJExtensionObj1.m in Sources */,
+				898C851124AC613D00F0706E /* KVCTestObject1.m in Sources */,
 				8980D2A924210F8500C74FB8 /* TLBusHomeVC.m in Sources */,
 				8993A5892425F2E10053F89C /* UIView+BlocksKit.m in Sources */,
 			);

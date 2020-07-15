@@ -1,0 +1,6 @@
+module Pods_RacTest_Swift {
+  umbrella header "Pods-RacTest_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

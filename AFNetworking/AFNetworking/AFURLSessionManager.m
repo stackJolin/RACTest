@@ -189,9 +189,7 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
 
 #pragma mark - NSURLSessionTaskDelegate
 
-- (void)URLSession:(__unused NSURLSession *)session
-              task:(NSURLSessionTask *)task
-didCompleteWithError:(NSError *)error
+- (void)URLSession:(__unused NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
     __strong AFURLSessionManager *manager = self.manager;
 
@@ -936,32 +934,49 @@ didBecomeInvalidWithError:(NSError *)error
     [[NSNotificationCenter defaultCenter] postNotificationName:AFURLSessionDidInvalidateNotification object:session];
 }
 
+// TODO: zhuhoulin，需要考虑权威机构发布的证书以及服务器自制的证书
 - (void)URLSession:(NSURLSession *)session
 didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
  completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *credential))completionHandler
 {
+    /**
+     challenge.protectionSpace.authenticationMethod 表示回调触发的原因
+     NSURLAuthenticationMethodServerTrust表示服务器端发来的证书
+     NSURLAuthenticationMethodClientCertificate表示，服务器端请求验证客户端证书
+     */
+    
     NSURLSessionAuthChallengeDisposition disposition = NSURLSessionAuthChallengePerformDefaultHandling;
     __block NSURLCredential *credential = nil;
 
     if (self.sessionDidReceiveAuthenticationChallenge) {
         disposition = self.sessionDidReceiveAuthenticationChallenge(session, challenge, &credential);
-    } else {
+    }
+    else {
+        // 如果是服务器发来的证书
         if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+            // 处理自签名和CA机构颁发的证书
             if ([self.securityPolicy evaluateServerTrust:challenge.protectionSpace.serverTrust forDomain:challenge.protectionSpace.host]) {
                 credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
                 if (credential) {
                     disposition = NSURLSessionAuthChallengeUseCredential;
-                } else {
+                }
+                else {
                     disposition = NSURLSessionAuthChallengePerformDefaultHandling;
                 }
-            } else {
+            }
+            else {
                 disposition = NSURLSessionAuthChallengeCancelAuthenticationChallenge;
             }
-        } else {
+        }
+        else {
             disposition = NSURLSessionAuthChallengePerformDefaultHandling;
         }
     }
 
+    /**
+     * 只有NSURLSessionAuthChallengeUseCredential表示验证成功，其他都是验证失败
+     */
+    
     if (completionHandler) {
         completionHandler(disposition, credential);
     }
@@ -969,14 +984,19 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
 
 #pragma mark - NSURLSessionTaskDelegate
 
+/**
+当一个HTTP请求试图执行重定向到一个不同的URL时，会调用这个代理方法
+*/
 - (void)URLSession:(NSURLSession *)session
               task:(NSURLSessionTask *)task
 willPerformHTTPRedirection:(NSHTTPURLResponse *)response
         newRequest:(NSURLRequest *)request
  completionHandler:(void (^)(NSURLRequest *))completionHandler
 {
+    // 系统生成的重定向的请求
     NSURLRequest *redirectRequest = request;
 
+    // 如果自定义了重定向，那么自己重新生成request
     if (self.taskWillPerformHTTPRedirection) {
         redirectRequest = self.taskWillPerformHTTPRedirection(session, task, response, request);
     }
@@ -986,25 +1006,31 @@ willPerformHTTPRedirection:(NSHTTPURLResponse *)response
     }
 }
 
-- (void)URLSession:(NSURLSession *)session
-              task:(NSURLSessionTask *)task
-didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
+/**
+当task接收到身份验证时，会调用这个代理方法。这个证书验证的处理方式和上面那个一模一样，只不过上面那个是session级别的，这个是task级别的
+*/
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
  completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *credential))completionHandler
 {
     NSURLSessionAuthChallengeDisposition disposition = NSURLSessionAuthChallengePerformDefaultHandling;
     __block NSURLCredential *credential = nil;
 
+    // 如果自带证书，那么使用自带的证书
     if (self.taskDidReceiveAuthenticationChallenge) {
         disposition = self.taskDidReceiveAuthenticationChallenge(session, task, challenge, &credential);
-    } else {
+    }
+    else {
+        // 如果服务器证书可信
         if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
             if ([self.securityPolicy evaluateServerTrust:challenge.protectionSpace.serverTrust forDomain:challenge.protectionSpace.host]) {
                 disposition = NSURLSessionAuthChallengeUseCredential;
                 credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
-            } else {
+            }
+            else {
                 disposition = NSURLSessionAuthChallengeCancelAuthenticationChallenge;
             }
-        } else {
+        }
+        else { // 如果验证方式不是NSURLAuthenticationMethodServerTrust，就是用默认方式验证证书
             disposition = NSURLSessionAuthChallengePerformDefaultHandling;
         }
     }
@@ -1013,7 +1039,12 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
         completionHandler(disposition, credential);
     }
 }
-
+/** Tells the delegate when a task requires a new request body stream to send to the remote server.
+ * 这个方法两种情况下会调用:
+ * 1.如果task是由uploadTaskWithStreamedRequest:创建的，那么提供初始的request body stream时候会调用该代理方法。
+ * 2.因为认证挑战或者其他可恢复的服务器错误，而导致需要客户端重新发送一个含有body stream的request，这时候会调用该代理。
+ * 相关连接：https://www.cnblogs.com/zkzzkz/p/5174071.html
+ */
 - (void)URLSession:(NSURLSession *)session
               task:(NSURLSessionTask *)task
  needNewBodyStream:(void (^)(NSInputStream *bodyStream))completionHandler
@@ -1031,6 +1062,9 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
     }
 }
 
+/*
+//周期性地通知代理发向送到服务器端数据的进度。
+*/
 - (void)URLSession:(NSURLSession *)session
               task:(NSURLSessionTask *)task
    didSendBodyData:(int64_t)bytesSent
@@ -1057,9 +1091,10 @@ totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend
     }
 }
 
-- (void)URLSession:(NSURLSession *)session
-              task:(NSURLSessionTask *)task
-didCompleteWithError:(NSError *)error
+/**
+ * 任务完成
+ */
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
 {
     AFURLSessionManagerTaskDelegate *delegate = [self delegateForTask:task];
 
@@ -1077,6 +1112,14 @@ didCompleteWithError:(NSError *)error
 
 #pragma mark - NSURLSessionDataDelegate
 
+/**
+ * 1.接收到服务器的响应，它默认会取消该请求
+ * @param session 会话对象
+ * @param dataTask 请求任务
+ * @param response 响应头信息
+ * @param completionHandler 回调给系统
+ */
+
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
 didReceiveResponse:(NSURLResponse *)response
@@ -1084,15 +1127,26 @@ didReceiveResponse:(NSURLResponse *)response
 {
     NSURLSessionResponseDisposition disposition = NSURLSessionResponseAllow;
 
+    /*
+     NSURLSessionResponseCancel = 0,取消 默认
+     NSURLSessionResponseAllow = 1, 接收
+     NSURLSessionResponseBecomeDownload = 2, 变成下载任务
+     NSURLSessionResponseBecomeStream        变成流
+     */
+    
     if (self.dataTaskDidReceiveResponse) {
         disposition = self.dataTaskDidReceiveResponse(session, dataTask, response);
     }
 
     if (completionHandler) {
+        // 这里的block是传给服务端的，如若不写则代表取消网络请求。
         completionHandler(disposition);
     }
 }
 
+/**
+ * 如果data Task变化成了下载任务(download task)，那么就会调用改代理方法，比如-URLSession:dataTask:didReceiveResponse:completionHandler:给completionHandler方法传递NSURLSessionResponseBecomeDownload，就会使data task变成download task。而且之前的data task不会再响应代理方法了。
+ */
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
 didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask
@@ -1108,6 +1162,12 @@ didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask
     }
 }
 
+/**
+ * 接收到服务器返回的数据
+ * @param session 会话对象
+ * @param dataTask 请求任务
+ * @param data 本次获取到的数据
+*/
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
     didReceiveData:(NSData *)data
@@ -1121,6 +1181,9 @@ didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask
     }
 }
 
+/**
+ * 询问data task或者上传任务(upload task)是否缓存response.当task接收到所有期望的数据后，session会调用此代理方法。如果你没有实现该方法，那么就会使用创建session时使用的configuration对象决定缓存策略。这个代理方法最初的目的是为了阻止缓存特定的URLs或者修改NSCacheURLResponse对象相关的userInfo字典。
+ */
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
  willCacheResponse:(NSCachedURLResponse *)proposedResponse
@@ -1148,7 +1211,11 @@ didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask
 #endif
 
 #pragma mark - NSURLSessionDownloadDelegate
-
+/*
+ * 下载完成的时候调用
+ * 这个方法内应该复制或者移动下载完的文件到另一个本地目录，因为这个方法返回的时候，会直接清理掉下载完的缓存
+ * URLSession:task:didCompleteWithError:这个方法依旧会被调用
+*/
 - (void)URLSession:(NSURLSession *)session
       downloadTask:(NSURLSessionDownloadTask *)downloadTask
 didFinishDownloadingToURL:(NSURL *)location
@@ -1173,6 +1240,9 @@ didFinishDownloadingToURL:(NSURL *)location
     }
 }
 
+/**
+ * 通知下载进度。接口会多次调用，在此接口中可进行下载进度的记录或更新UI的下载进度条
+ */
 - (void)URLSession:(NSURLSession *)session
       downloadTask:(NSURLSessionDownloadTask *)downloadTask
       didWriteData:(int64_t)bytesWritten
@@ -1191,6 +1261,12 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
     }
 }
 
+/* 恢复下载
+* Sent when a download has been resumed. If a download failed with an
+* error, the -userInfo dictionary of the error will contain an
+* NSURLSessionDownloadTaskResumeData key, whose value is the resume
+* data.
+*/
 - (void)URLSession:(NSURLSession *)session
       downloadTask:(NSURLSessionDownloadTask *)downloadTask
  didResumeAtOffset:(int64_t)fileOffset

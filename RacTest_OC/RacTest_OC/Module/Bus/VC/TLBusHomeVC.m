@@ -8,11 +8,19 @@
 
 #import "TLBusHomeVC.h"
 #import "TLBusHomeHeader.h"
+#import "KVCTestObject1.h"
+#import "JsonModelObj1.h"
+#import <MJExtension/MJExtension.h>
+#import "MJExtensionObj1.h"
+#import <objc/message.h>
+#import <YYModel/YYModel.h>
 
 @interface TLBusHomeVC()
 
 @property (nonatomic, strong) UITableView     *vTable;
 @property (nonatomic, strong) TLBusHomeHeader *vHeader;
+@property (nonatomic, strong) NSMapTable *nMap;
+
 
 @end
 
@@ -20,52 +28,73 @@
 
 - (void)bindView {
     self.view.backgroundColor = UIColor.whiteColor;
-    [self.view addSubview:self.vTable];
-    self.vTable.tableHeaderView = self.vHeader;
     
+    static CFMutableDictionaryRef cache1;
+    cache1 = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
     
-    RACSignal *s = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-        
-        [subscriber sendNext:@(0)];
-       
-        [subscriber sendError:nil];
-        
-        [subscriber sendCompleted];
-        
-        return [RACDisposable disposableWithBlock:^{
-            NSLog(@"订阅被取消了");
-        }];
-    }];
+    NSObject *a = CFDictionaryGetValue(cache1, (__bridge const void *)([UIViewController class]));
     
-    // 一次性添加三个事件(next，error，completed)的订阅者，这种只是创建了一个订阅者
-    [s subscribeNext:^(id  _Nullable x) {
-        
-    } error:^(NSError * _Nullable error) {
-        
-    } completed:^{
-        
-    }];
+    MJExtensionObj1 *obj4 = [MJExtensionObj1 yy_modelWithJSON:@"{\"name\":\"fdf\"}"];
     
-    // 添加Next事件的订阅者
-    [s subscribeNext:^(id  _Nullable x) {
-        
-    }];
+    KVCTestObject1 *obj1 = [KVCTestObject1 new];
+    [obj1 setValue:@"fd" forUndefinedKey:@"obj1"];
     
-    // 添加Error事件的订阅者
-    [s subscribeError:^(NSError * _Nullable error) {
-        
-    }];
+    NSString *title = @"{\"name\":\"fdf\"}";
     
-    // 添加Completed事件的订阅者
-    [s subscribeCompleted:^{
-        
-    }];
+    JsonModelObj1 *obj2 = [[JsonModelObj1 alloc] initWithString:title error:nil];
+    
+    MJExtensionObj1 *obj3 = [MJExtensionObj1 mj_setKeyValues:title];
+    
+    NSObject * objc3 = [NSObject new];
+    
+    self.nMap = [NSMapTable mapTableWithKeyOptions:NSMapTableStrongMemory valueOptions:NSMapTableWeakMemory];
+    
+//    [self.view addSubview:self.vTable];
+//    self.vTable.tableHeaderView = self.vHeader;
+//
+//
+//    RACSignal *s = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+//
+//        [subscriber sendNext:@(0)];
+//
+//        [subscriber sendError:nil];
+//
+//        [subscriber sendCompleted];
+//
+//        return [RACDisposable disposableWithBlock:^{
+//            NSLog(@"订阅被取消了");
+//        }];
+//    }];
+//
+//    // 一次性添加三个事件(next，error，completed)的订阅者，这种只是创建了一个订阅者
+//    [s subscribeNext:^(id  _Nullable x) {
+//
+//    } error:^(NSError * _Nullable error) {
+//
+//    } completed:^{
+//
+//    }];
+//
+//    // 添加Next事件的订阅者
+//    [s subscribeNext:^(id  _Nullable x) {
+//
+//    }];
+//
+//    // 添加Error事件的订阅者
+//    [s subscribeError:^(NSError * _Nullable error) {
+//
+//    }];
+//
+//    // 添加Completed事件的订阅者
+//    [s subscribeCompleted:^{
+//
+//    }];
 }
 
 - (void)bindLayout {
-    [self.vTable mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
+//    [self.vTable mas_remakeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.equalTo(self.view);
+//    }];
 }
 
 - (void)bindData {

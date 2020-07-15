@@ -10,6 +10,7 @@ def all_pods
 #  pod 'WCDB'
 #  pod 'JSONModel'
 #  pod 'MJRfresh'
+#  pod 'MJExtension'
 
 ######################## Local ============================
   pod 'ReactiveObjC', :path => '../ReactiveObjC/'
@@ -20,6 +21,10 @@ def all_pods
   pod 'YYModel', :path => '../YYModel/'
   pod 'YYCache', :path => '../YYCache/'
   pod 'SDWebImage', :path => '../SDWebImage/'
+  pod 'MJExtension', :path => '../MJExtension/'
+  pod 'KVOController', :path => '../KVOController/'
+  
+#  pod 'SDWebImageWebPCoder', :path => '../SDWebImageWebPCoder/'
   
 ######################## CommonLib ========================
   pod 'LTCoreKit', :path => '../../LTCoreKit/'

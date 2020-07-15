@@ -19,15 +19,19 @@
 @property (assign, nonatomic) BOOL isIndex DEPRECATED_ATTRIBUTE;
 
 /** The name of the declared property (not the ivar name) */
+/// 声明的属性名称(是属性名称而不是成员变量的名称)
 @property (copy, nonatomic) NSString *name;
 
 /** A property class type  */
+/// 属性的类型
 @property (assign, nonatomic) Class type;
 
 /** Struct name if a struct */
+/// 属性的结构体名称
 @property (strong, nonatomic) NSString *structName;
 
 /** The name of the protocol the property conforms to (or nil) */
+/// 属性所遵守的协议的名称
 @property (copy, nonatomic) NSString *protocol;
 
 /** If YES, it can be missing in the input data, and the input would be still valid */

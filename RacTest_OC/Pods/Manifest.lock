@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - IQKeyboardManager (6.5.5)
   - JSONModel (1.7.0)
+  - KVOController (1.2.0)
   - LTCoreKit (0.1.0)
   - LTMacro (0.1.0)
   - LTNetMonitor (0.1.0)
@@ -26,6 +27,7 @@ PODS:
   - LTUIKit (0.1.0):
     - LTCoreKit
   - Masonry (1.1.0)
+  - MJExtension (3.2.2)
   - MJRefresh (3.3.1)
   - ReactiveObjC (3.1.0)
   - SDWebImage (5.7.2):
@@ -44,6 +46,7 @@ DEPENDENCIES:
   - AFNetworking (from `../AFNetworking/`)
   - IQKeyboardManager
   - JSONModel (from `../JSONModel/`)
+  - KVOController (from `../KVOController/`)
   - LTCoreKit (from `../../LTCoreKit/`)
   - LTMacro (from `../../LTMacro`)
   - LTNetMonitor (from `../../LTNetMonitor`)
@@ -51,6 +54,7 @@ DEPENDENCIES:
   - LTRouter (from `../../LTRouter`)
   - LTUIKit (from `../../LTUIKit/`)
   - Masonry
+  - MJExtension (from `../MJExtension/`)
   - MJRefresh (from `../MJRefresh-3.3.1/`)
   - ReactiveObjC (from `../ReactiveObjC/`)
   - SDWebImage (from `../SDWebImage/`)
@@ -70,6 +74,8 @@ EXTERNAL SOURCES:
     :path: "../AFNetworking/"
   JSONModel:
     :path: "../JSONModel/"
+  KVOController:
+    :path: "../KVOController/"
   LTCoreKit:
     :path: "../../LTCoreKit/"
   LTMacro:
@@ -82,6 +88,8 @@ EXTERNAL SOURCES:
     :path: "../../LTRouter"
   LTUIKit:
     :path: "../../LTUIKit/"
+  MJExtension:
+    :path: "../MJExtension/"
   MJRefresh:
     :path: "../MJRefresh-3.3.1/"
   ReactiveObjC:
@@ -99,6 +107,7 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   LTCoreKit: 6d6b4c280b9a4679b80fdc6747238aa71bf6f16b
   LTMacro: 6fbb892ce1359580b866d095390abcaf34860cbe
   LTNetMonitor: d6d3bdeae5c7dad48d6d9a52d64e8a931ec7b31c
@@ -106,6 +115,7 @@ SPEC CHECKSUMS:
   LTRouter: 92618e1f6ce8e30f60a076b6e654e7de6bef3069
   LTUIKit: a7b64d1564df98db8731bd871cec7fdf4dbd519e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: d9ea4959d99c52276dfada481987018fcaea3d58
@@ -115,6 +125,6 @@ SPEC CHECKSUMS:
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: e1e16cf119fb7ee190adc94c6537d126378c510d
+PODFILE CHECKSUM: a27f5bb8d9741a61b854667db1854cb619f1b45c
 
 COCOAPODS: 1.8.3
