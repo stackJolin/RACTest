@@ -124,6 +124,7 @@ NSString * AFPercentEscapedStringFromString(NSString *string) {
     return self;
 }
 
+// URL编码
 - (NSString *)URLEncodedStringValue {
     if (!self.value || [self.value isEqual:[NSNull null]]) {
         return AFPercentEscapedStringFromString([self.field description]);
@@ -350,7 +351,7 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
 
 // Workarounds for crashing behavior using Key-Value Observing with XCTest
 // See https://github.com/AFNetworking/AFNetworking/issues/2523
-
+// AFN的KVO会crash，所以这里重写了监听
 - (void)setAllowsCellularAccess:(BOOL)allowsCellularAccess {
     [self willChangeValueForKey:NSStringFromSelector(@selector(allowsCellularAccess))];
     _allowsCellularAccess = allowsCellularAccess;
@@ -473,8 +474,10 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
     NSParameterAssert(method);
     NSParameterAssert(![method isEqualToString:@"GET"] && ![method isEqualToString:@"HEAD"]);
 
+    // 构建请求头
     NSMutableURLRequest *mutableRequest = [self requestWithMethod:method URLString:URLString parameters:nil error:error];
 
+    // 下面是构建请求体
     __block AFStreamingMultipartFormData *formData = [[AFStreamingMultipartFormData alloc] initWithURLRequest:mutableRequest stringEncoding:NSUTF8StringEncoding];
 
     if (parameters) {
@@ -482,9 +485,11 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
             NSData *data = nil;
             if ([pair.value isKindOfClass:[NSData class]]) {
                 data = pair.value;
-            } else if ([pair.value isEqual:[NSNull null]]) {
+            }
+            else if ([pair.value isEqual:[NSNull null]]) {
                 data = [NSData data];
-            } else {
+            }
+            else {
                 data = [[pair.value description] dataUsingEncoding:self.stringEncoding];
             }
 
@@ -610,7 +615,7 @@ static void *AFHTTPRequestSerializerObserverContext = &AFHTTPRequestSerializerOb
         
         if (![mutableRequest valueForHTTPHeaderField:@"Content-Type"]) {
             // 设置内容类型是 表单
-            // 表单上传内容有两种content-type，一种是'application/x-www-form-urlencoded'，是默认的方式；另一种是''multipart/form-data，用于文件上传
+            // 表单上传内容有两种content-type，一种是'application/x-www-form-urlencoded'，是默认的方式；另一种是'multipart/form-data’，用于文件上传
             [mutableRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
         }
         
@@ -845,6 +850,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     [mutableHeaders setValue:[NSString stringWithFormat:@"form-data; name=\"%@\"; filename=\"%@\"", name, fileName] forKey:@"Content-Disposition"];
     [mutableHeaders setValue:mimeType forKey:@"Content-Type"];
 
+    // 拼接请求体
     AFHTTPBodyPart *bodyPart = [[AFHTTPBodyPart alloc] init];
     bodyPart.stringEncoding = self.stringEncoding;
     bodyPart.headers = mutableHeaders;
@@ -908,6 +914,7 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
     [self appendPartWithHeaders:mutableHeaders body:data];
 }
 
+// 设置
 - (void)appendPartWithHeaders:(NSDictionary *)headers
                          body:(NSData *)body
 {
@@ -1019,13 +1026,15 @@ NSTimeInterval const kAFUploadStream3GSuggestedDelay = 0.2;
             if (!(self.currentHTTPBodyPart = [self.HTTPBodyPartEnumerator nextObject])) {
                 break;
             }
-        } else {
+        }
+        else {
             NSUInteger maxLength = MIN(length, self.numberOfBytesInPacket) - (NSUInteger)totalNumberOfBytesRead;
             NSInteger numberOfBytesRead = [self.currentHTTPBodyPart read:&buffer[totalNumberOfBytesRead] maxLength:maxLength];
             if (numberOfBytesRead == -1) {
                 self.streamError = self.currentHTTPBodyPart.inputStream.streamError;
                 break;
-            } else {
+            }
+            else {
                 totalNumberOfBytesRead += numberOfBytesRead;
 
                 if (self.delay > 0.0f) {

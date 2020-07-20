@@ -252,6 +252,12 @@ forHTTPHeaderField:(NSString *)field;
 
  @return An `NSMutableURLRequest` object
  */
+
+/**
+ * 构建一个mutablpartForm的request，并且通过AFMultipartFormData来构建请求体。文件上传
+ *
+ */
+
 - (NSMutableURLRequest *)multipartFormRequestWithMethod:(NSString *)method
                                               URLString:(NSString *)URLString
                                              parameters:(nullable NSDictionary <NSString *, id> *)parameters
@@ -269,6 +275,7 @@ forHTTPHeaderField:(NSString *)field;
 
  @see https://github.com/AFNetworking/AFNetworking/issues/1398
  */
+// 指定一个文件的URL上传
 - (NSMutableURLRequest *)requestWithMultipartFormRequest:(NSURLRequest *)request
                              writingStreamContentsToFile:(NSURL *)fileURL
                                        completionHandler:(nullable void (^)(NSError * _Nullable error))handler;

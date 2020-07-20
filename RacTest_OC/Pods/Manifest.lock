@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - CTMediator (36)
   - IQKeyboardManager (6.5.5)
   - JSONModel (1.7.0)
   - KVOController (1.2.0)
@@ -35,6 +36,7 @@ PODS:
   - SDWebImage/Core (5.7.2)
   - SQLiteRepairKit (1.2.2):
     - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - VKURLAction (0.0.1)
   - WCDB (1.0.7.5):
     - SQLiteRepairKit (~> 1.2.0)
     - WCDBOptimizedSQLCipher (~> 1.2.0)
@@ -44,6 +46,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (from `../AFNetworking/`)
+  - CTMediator (from `../CTMediator/`)
   - IQKeyboardManager
   - JSONModel (from `../JSONModel/`)
   - KVOController (from `../KVOController/`)
@@ -58,6 +61,7 @@ DEPENDENCIES:
   - MJRefresh (from `../MJRefresh-3.3.1/`)
   - ReactiveObjC (from `../ReactiveObjC/`)
   - SDWebImage (from `../SDWebImage/`)
+  - VKURLAction (from `../VKURLAction/`)
   - WCDB (from `../wcdb-1.0.8.2/`)
   - YYCache (from `../YYCache/`)
   - YYModel (from `../YYModel/`)
@@ -72,6 +76,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   AFNetworking:
     :path: "../AFNetworking/"
+  CTMediator:
+    :path: "../CTMediator/"
   JSONModel:
     :path: "../JSONModel/"
   KVOController:
@@ -96,6 +102,8 @@ EXTERNAL SOURCES:
     :path: "../ReactiveObjC/"
   SDWebImage:
     :path: "../SDWebImage/"
+  VKURLAction:
+    :path: "../VKURLAction/"
   WCDB:
     :path: "../wcdb-1.0.8.2/"
   YYCache:
@@ -105,6 +113,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  CTMediator: 918aa0afe3fa537f380a1fb15e7603a7e19fa0c4
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
@@ -120,11 +129,12 @@ SPEC CHECKSUMS:
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: d9ea4959d99c52276dfada481987018fcaea3d58
   SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
+  VKURLAction: 75daccfd6d69f001669031346f86a96d43b8829b
   WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: a27f5bb8d9741a61b854667db1854cb619f1b45c
+PODFILE CHECKSUM: e76c3610cb16ffae8ba036422d101d084aa01b75
 
 COCOAPODS: 1.8.3

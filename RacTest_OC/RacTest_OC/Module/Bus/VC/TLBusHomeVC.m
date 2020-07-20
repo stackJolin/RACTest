@@ -14,6 +14,7 @@
 #import "MJExtensionObj1.h"
 #import <objc/message.h>
 #import <YYModel/YYModel.h>
+#import <VKURLAction/VKMsgSend.h>
 
 @interface TLBusHomeVC()
 
@@ -38,6 +39,9 @@
     
     KVCTestObject1 *obj1 = [KVCTestObject1 new];
     [obj1 setValue:@"fd" forUndefinedKey:@"obj1"];
+    
+    NSError *err;
+    [self VKCallSelector:@selector(clickSelf) error:&err, 0, 1, "String"];
     
     NSString *title = @"{\"name\":\"fdf\"}";
     

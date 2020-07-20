@@ -23,6 +23,8 @@ def all_pods
   pod 'SDWebImage', :path => '../SDWebImage/'
   pod 'MJExtension', :path => '../MJExtension/'
   pod 'KVOController', :path => '../KVOController/'
+  pod 'CTMediator', :path => '../CTMediator/'
+  pod 'VKURLAction', :path => '../VKURLAction/'
   
 #  pod 'SDWebImageWebPCoder', :path => '../SDWebImageWebPCoder/'
   
