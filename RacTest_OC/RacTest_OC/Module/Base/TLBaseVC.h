@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TLBaseVC : LTBaseVC
+@interface TLBaseVC : UIViewController
 
 
 @end

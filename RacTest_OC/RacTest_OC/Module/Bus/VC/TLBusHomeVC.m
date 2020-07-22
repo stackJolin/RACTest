@@ -29,29 +29,36 @@
 
 - (void)bindView {
     self.view.backgroundColor = UIColor.whiteColor;
+    dispatch_queue_t serialQueue = dispatch_queue_create("Dan-serial", DISPATCH_QUEUE_SERIAL);
+    for(int i = 0; i < 5; i++){
+        dispatch_sync(serialQueue, ^{
+                NSLog(@"我开始了：%@ , %@",@(i),[NSThread currentThread]);
+                [NSThread sleepForTimeInterval: i % 3];
+        });
+    }
     
-    static CFMutableDictionaryRef cache1;
-    cache1 = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
-    
-    NSObject *a = CFDictionaryGetValue(cache1, (__bridge const void *)([UIViewController class]));
-    
-    MJExtensionObj1 *obj4 = [MJExtensionObj1 yy_modelWithJSON:@"{\"name\":\"fdf\"}"];
-    
-    KVCTestObject1 *obj1 = [KVCTestObject1 new];
-    [obj1 setValue:@"fd" forUndefinedKey:@"obj1"];
-    
-    NSError *err;
-    [self VKCallSelector:@selector(clickSelf) error:&err, 0, 1, "String"];
-    
-    NSString *title = @"{\"name\":\"fdf\"}";
-    
-    JsonModelObj1 *obj2 = [[JsonModelObj1 alloc] initWithString:title error:nil];
-    
-    MJExtensionObj1 *obj3 = [MJExtensionObj1 mj_setKeyValues:title];
-    
-    NSObject * objc3 = [NSObject new];
-    
-    self.nMap = [NSMapTable mapTableWithKeyOptions:NSMapTableStrongMemory valueOptions:NSMapTableWeakMemory];
+//    static CFMutableDictionaryRef cache1;
+//    cache1 = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+//
+//    NSObject *a = CFDictionaryGetValue(cache1, (__bridge const void *)([UIViewController class]));
+//
+//    MJExtensionObj1 *obj4 = [MJExtensionObj1 yy_modelWithJSON:@"{\"name\":\"fdf\"}"];
+//
+//    KVCTestObject1 *obj1 = [KVCTestObject1 new];
+//    [obj1 setValue:@"fd" forUndefinedKey:@"obj1"];
+//
+//    NSError *err;
+//    [self VKCallSelector:@selector(clickSelf) error:&err, 0, 1, "String"];
+//
+//    NSString *title = @"{\"name\":\"fdf\"}";
+//
+//    JsonModelObj1 *obj2 = [[JsonModelObj1 alloc] initWithString:title error:nil];
+//
+//    MJExtensionObj1 *obj3 = [MJExtensionObj1 mj_setKeyValues:title];
+//
+//    NSObject * objc3 = [NSObject new];
+//
+//    self.nMap = [NSMapTable mapTableWithKeyOptions:NSMapTableStrongMemory valueOptions:NSMapTableWeakMemory];
     
 //    [self.view addSubview:self.vTable];
 //    self.vTable.tableHeaderView = self.vHeader;
@@ -106,7 +113,7 @@
 }
 
 - (void)bindAction {
-    
+
 }
 
 #pragma mark- Getter
