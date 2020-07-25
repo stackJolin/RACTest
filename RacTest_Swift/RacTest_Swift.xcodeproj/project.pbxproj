@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		893E152F24C004910024FD2A /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 893E152E24C004910024FD2A /* RouterTest.swift */; };
+		8996A23F24CC1120009D13D3 /* SwiftNewFeature5.0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996A23E24CC1120009D13D3 /* SwiftNewFeature5.0.swift */; };
+		8996A24124CC11C7009D13D3 /* SwiftNewFeature5.1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996A24024CC11C7009D13D3 /* SwiftNewFeature5.1.swift */; };
+		8996A24324CC11D8009D13D3 /* SwiftNewFeature5.2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996A24224CC11D8009D13D3 /* SwiftNewFeature5.2.swift */; };
+		8996A24524CC11E7009D13D3 /* SwiftNewFeature5.3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996A24424CC11E7009D13D3 /* SwiftNewFeature5.3.swift */; };
+		8996A24724CC1B31009D13D3 /* SwiftNewFeature4.1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996A24624CC1B31009D13D3 /* SwiftNewFeature4.1.swift */; };
+		8996A24924CC1BFA009D13D3 /* SwiftNewFeature4.2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8996A24824CC1BFA009D13D3 /* SwiftNewFeature4.2.swift */; };
 		89D057F324ACD84E00464F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D057F224ACD84E00464F11 /* AppDelegate.swift */; };
 		89D057F724ACD84E00464F11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D057F624ACD84E00464F11 /* ViewController.swift */; };
 		89D057FA24ACD84E00464F11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D057F824ACD84E00464F11 /* Main.storyboard */; };
@@ -20,6 +26,12 @@
 		34CFD13FAC11600CDD459C0B /* libPods-RacTest_Swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RacTest_Swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F4E5417FF74DF4B77EA0670 /* Pods-RacTest_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacTest_Swift.release.xcconfig"; path = "Target Support Files/Pods-RacTest_Swift/Pods-RacTest_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		893E152E24C004910024FD2A /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
+		8996A23E24CC1120009D13D3 /* SwiftNewFeature5.0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeature5.0.swift; sourceTree = "<group>"; };
+		8996A24024CC11C7009D13D3 /* SwiftNewFeature5.1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeature5.1.swift; sourceTree = "<group>"; };
+		8996A24224CC11D8009D13D3 /* SwiftNewFeature5.2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeature5.2.swift; sourceTree = "<group>"; };
+		8996A24424CC11E7009D13D3 /* SwiftNewFeature5.3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeature5.3.swift; sourceTree = "<group>"; };
+		8996A24624CC1B31009D13D3 /* SwiftNewFeature4.1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeature4.1.swift; sourceTree = "<group>"; };
+		8996A24824CC1BFA009D13D3 /* SwiftNewFeature4.2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeature4.2.swift; sourceTree = "<group>"; };
 		89D057EF24ACD84E00464F11 /* RacTest_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RacTest_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D057F224ACD84E00464F11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D057F624ACD84E00464F11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8996A23D24CC1033009D13D3 /* SwiftNewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				8996A23E24CC1120009D13D3 /* SwiftNewFeature5.0.swift */,
+				8996A24024CC11C7009D13D3 /* SwiftNewFeature5.1.swift */,
+				8996A24224CC11D8009D13D3 /* SwiftNewFeature5.2.swift */,
+				8996A24424CC11E7009D13D3 /* SwiftNewFeature5.3.swift */,
+				8996A24624CC1B31009D13D3 /* SwiftNewFeature4.1.swift */,
+				8996A24824CC1BFA009D13D3 /* SwiftNewFeature4.2.swift */,
+			);
+			path = SwiftNewFeature;
+			sourceTree = "<group>";
+		};
 		89D057E624ACD84E00464F11 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +88,7 @@
 		89D057F124ACD84E00464F11 /* RacTest_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				8996A23D24CC1033009D13D3 /* SwiftNewFeature */,
 				89D057F224ACD84E00464F11 /* AppDelegate.swift */,
 				89D057F624ACD84E00464F11 /* ViewController.swift */,
 				89D057F824ACD84E00464F11 /* Main.storyboard */,
@@ -188,7 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8996A24524CC11E7009D13D3 /* SwiftNewFeature5.3.swift in Sources */,
+				8996A24724CC1B31009D13D3 /* SwiftNewFeature4.1.swift in Sources */,
+				8996A24924CC1BFA009D13D3 /* SwiftNewFeature4.2.swift in Sources */,
+				8996A24124CC11C7009D13D3 /* SwiftNewFeature5.1.swift in Sources */,
+				8996A24324CC11D8009D13D3 /* SwiftNewFeature5.2.swift in Sources */,
 				89D057F724ACD84E00464F11 /* ViewController.swift in Sources */,
+				8996A23F24CC1120009D13D3 /* SwiftNewFeature5.0.swift in Sources */,
 				893E152F24C004910024FD2A /* RouterTest.swift in Sources */,
 				89D057F324ACD84E00464F11 /* AppDelegate.swift in Sources */,
 			);
