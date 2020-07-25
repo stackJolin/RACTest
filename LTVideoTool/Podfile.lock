@@ -1,0 +1,62 @@
+PODS:
+  - IQKeyboardManager (6.5.5)
+  - JSONModel (1.8.0)
+  - LTCoreKit (0.1.0)
+  - LTMacro (0.1.0)
+  - LTNetMonitor (0.1.0)
+  - LTNetRequestManager (0.1.0):
+    - JSONModel
+    - LTMacro
+  - LTRouter (0.1.0)
+  - LTUIKit (0.1.0):
+    - LTCoreKit
+  - Masonry (1.1.0)
+  - TZImagePickerController (3.4.1)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - LTCoreKit (from `../../LTCoreKit/`)
+  - LTMacro (from `../../LTMacro`)
+  - LTNetMonitor (from `../../LTNetMonitor`)
+  - LTNetRequestManager (from `../../LTNetRequestManager`)
+  - LTRouter (from `../../LTRouter`)
+  - LTUIKit (from `../../LTUIKit/`)
+  - Masonry
+  - TZImagePickerController
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - IQKeyboardManager
+    - JSONModel
+    - Masonry
+    - TZImagePickerController
+
+EXTERNAL SOURCES:
+  LTCoreKit:
+    :path: "../../LTCoreKit/"
+  LTMacro:
+    :path: "../../LTMacro"
+  LTNetMonitor:
+    :path: "../../LTNetMonitor"
+  LTNetRequestManager:
+    :path: "../../LTNetRequestManager"
+  LTRouter:
+    :path: "../../LTRouter"
+  LTUIKit:
+    :path: "../../LTUIKit/"
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  LTCoreKit: 6d6b4c280b9a4679b80fdc6747238aa71bf6f16b
+  LTMacro: 6fbb892ce1359580b866d095390abcaf34860cbe
+  LTNetMonitor: d6d3bdeae5c7dad48d6d9a52d64e8a931ec7b31c
+  LTNetRequestManager: 1693284d805cd3707569528da4b222fcc4109113
+  LTRouter: 92618e1f6ce8e30f60a076b6e654e7de6bef3069
+  LTUIKit: a7b64d1564df98db8731bd871cec7fdf4dbd519e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  TZImagePickerController: 4e7a7b3d314f8a75f11042931dfd9d34c270c7db
+
+PODFILE CHECKSUM: c6e464a6d69f266f6eb8767b25fb04b7c2f8cfce
+
+COCOAPODS: 1.9.3

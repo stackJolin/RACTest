@@ -1,0 +1,21 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+
+def all_pods
+  pod 'Masonry'
+  pod 'IQKeyboardManager'
+  pod 'TZImagePickerController'
+  
+######################## CommonLib ========================
+  pod 'LTCoreKit', :path => '../../LTCoreKit/'
+  pod 'LTUIKit', :path => '../../LTUIKit/'
+  pod 'LTNetMonitor', :path => '../../LTNetMonitor'
+  pod 'LTMacro', :path => '../../LTMacro'
+  pod 'LTRouter', :path => '../../LTRouter'
+  pod 'LTNetRequestManager', :path => '../../LTNetRequestManager'
+end
+
+target 'LTVideoTool' do
+  all_pods
+end

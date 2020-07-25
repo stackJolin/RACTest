@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TLBaseVC : UIViewController
 
+- (void)bindView;
+- (void)bindLayout;
+- (void)bindAction;
+
 
 @end
 

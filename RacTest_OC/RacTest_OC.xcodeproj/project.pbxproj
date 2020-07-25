@@ -25,6 +25,7 @@
 		8993A58C2425F2EA0053F89C /* UIControl+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8993A58A2425F2EA0053F89C /* UIControl+BlocksKit.m */; };
 		8993A590242603E10053F89C /* TLBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8993A58F242603E10053F89C /* TLBaseVC.m */; };
 		8993A5A224285C240053F89C /* UIView+Associate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8993A5A124285C240053F89C /* UIView+Associate.m */; };
+		8996A23524CAC920009D13D3 /* OCCopyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8996A23424CAC920009D13D3 /* OCCopyTest.m */; };
 		89D0580924AD8AC000464F11 /* MJExtensionObj1.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D0580824AD8AC000464F11 /* MJExtensionObj1.m */; };
 		A29BD8639AECC6B2C5628BA5 /* libPods-RacTest_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDDEB948B8C2570FE1B8FF0 /* libPods-RacTest_OC.a */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,8 @@
 		8993A58F242603E10053F89C /* TLBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLBaseVC.m; sourceTree = "<group>"; };
 		8993A5A024285C240053F89C /* UIView+Associate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Associate.h"; sourceTree = "<group>"; };
 		8993A5A124285C240053F89C /* UIView+Associate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Associate.m"; sourceTree = "<group>"; };
+		8996A23324CAC920009D13D3 /* OCCopyTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCCopyTest.h; sourceTree = "<group>"; };
+		8996A23424CAC920009D13D3 /* OCCopyTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCCopyTest.m; sourceTree = "<group>"; };
 		89D0580724AD8AC000464F11 /* MJExtensionObj1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJExtensionObj1.h; sourceTree = "<group>"; };
 		89D0580824AD8AC000464F11 /* MJExtensionObj1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJExtensionObj1.m; sourceTree = "<group>"; };
 		A6A33C69A95972FC23804455 /* Pods-RacTest_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RacTest_OC.release.xcconfig"; path = "Target Support Files/Pods-RacTest_OC/Pods-RacTest_OC.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +109,7 @@
 		6D51EA7F242073D400A233E0 /* RacTest_OC */ = {
 			isa = PBXGroup;
 			children = (
+				8996A23224CAC8E7009D13D3 /* OCBaseTest */,
 				89D0580624AD8A7600464F11 /* MJExtension */,
 				898C851524ACB29000F0706E /* JSONModelTest */,
 				898C850E24AB2D4900F0706E /* KVCTest */,
@@ -254,6 +258,15 @@
 			children = (
 			);
 			path = BlocksKit;
+			sourceTree = "<group>";
+		};
+		8996A23224CAC8E7009D13D3 /* OCBaseTest */ = {
+			isa = PBXGroup;
+			children = (
+				8996A23324CAC920009D13D3 /* OCCopyTest.h */,
+				8996A23424CAC920009D13D3 /* OCCopyTest.m */,
+			);
+			path = OCBaseTest;
 			sourceTree = "<group>";
 		};
 		89D0580624AD8A7600464F11 /* MJExtension */ = {
@@ -408,6 +421,7 @@
 				6D51EA93242073D900A233E0 /* main.m in Sources */,
 				6D51EAB22421AD9300A233E0 /* LTBusHomeVM.m in Sources */,
 				8993A590242603E10053F89C /* TLBaseVC.m in Sources */,
+				8996A23524CAC920009D13D3 /* OCCopyTest.m in Sources */,
 				89D0580924AD8AC000464F11 /* MJExtensionObj1.m in Sources */,
 				898C851124AC613D00F0706E /* KVCTestObject1.m in Sources */,
 				8980D2A924210F8500C74FB8 /* TLBusHomeVC.m in Sources */,

@@ -14,6 +14,14 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self bindView];
+    [self bindLayout];
+    [self bindAction];
 }
+
+- (void)bindView {}
+- (void)bindLayout {}
+- (void)bindAction {}
 
 @end

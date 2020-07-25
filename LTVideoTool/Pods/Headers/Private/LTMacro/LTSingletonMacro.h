@@ -1,0 +1,1 @@
+../../../../../../LTMacro/LTMacro/Classes/LTSingletonMacro.h

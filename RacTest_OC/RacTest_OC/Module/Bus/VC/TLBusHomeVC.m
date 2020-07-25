@@ -13,14 +13,15 @@
 #import <MJExtension/MJExtension.h>
 #import "MJExtensionObj1.h"
 #import <objc/message.h>
-#import <YYModel/YYModel.h>
+#import <YYKit/NSObject+YYModel.h>
 #import <VKURLAction/VKMsgSend.h>
+#import "OCCopyTest.h"
 
 @interface TLBusHomeVC()
 
 @property (nonatomic, strong) UITableView     *vTable;
 @property (nonatomic, strong) TLBusHomeHeader *vHeader;
-@property (nonatomic, strong) NSMapTable *nMap;
+@property (nonatomic, retain) NSMapTable *nMap;
 
 
 @end
@@ -29,13 +30,27 @@
 
 - (void)bindView {
     self.view.backgroundColor = UIColor.whiteColor;
-    dispatch_queue_t serialQueue = dispatch_queue_create("Dan-serial", DISPATCH_QUEUE_SERIAL);
-    for(int i = 0; i < 5; i++){
-        dispatch_sync(serialQueue, ^{
-                NSLog(@"我开始了：%@ , %@",@(i),[NSThread currentThread]);
-                [NSThread sleepForTimeInterval: i % 3];
-        });
-    }
+    
+    [OCCopyTest testPropertyCopy];
+    
+
+    
+    
+//    dispatch_queue_t serialQueue = dispatch_queue_create("Dan-serial", DISPATCH_QUEUE_SERIAL);
+//    for(int i = 0; i < 5; i++){
+//        dispatch_sync(serialQueue, ^{
+//                NSLog(@"我开始了：%@ , %@",@(i),[NSThread currentThread]);
+//                [NSThread sleepForTimeInterval: i % 3];
+//        });
+//    }
+//
+//    NSObject *b = [NSObject new];
+//
+//    void (^testBlock)(void) = ^{
+//        NSLog(@"Integer is: %i", b);
+//        self = [TLBusHomeVC new];
+//    };
+//    testBlock();
     
 //    static CFMutableDictionaryRef cache1;
 //    cache1 = CFDictionaryCreateMutable(CFAllocatorGetDefault(), 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);

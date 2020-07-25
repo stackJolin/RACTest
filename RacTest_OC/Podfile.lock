@@ -63,8 +63,9 @@ PODS:
     - SQLiteRepairKit (~> 1.2.0)
     - WCDBOptimizedSQLCipher (~> 1.2.0)
   - WCDBOptimizedSQLCipher (1.2.1)
-  - YYCache (1.0.4)
-  - YYModel (1.0.4)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - AFNetworking (from `../AFNetworking/`)
@@ -86,8 +87,7 @@ DEPENDENCIES:
   - SDWebImage (from `../SDWebImage/`)
   - VKURLAction (from `../VKURLAction/`)
   - WCDB (from `../wcdb-1.0.8.2/`)
-  - YYCache (from `../YYCache/`)
-  - YYModel (from `../YYModel/`)
+  - YYKit (from `../YYKit/`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -134,10 +134,8 @@ EXTERNAL SOURCES:
     :path: "../VKURLAction/"
   WCDB:
     :path: "../wcdb-1.0.8.2/"
-  YYCache:
-    :path: "../YYCache/"
-  YYModel:
-    :path: "../YYModel/"
+  YYKit:
+    :path: "../YYKit/"
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -164,9 +162,8 @@ SPEC CHECKSUMS:
   VKURLAction: 75daccfd6d69f001669031346f86a96d43b8829b
   WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
-  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
-  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 52c7c2c16aa4740c84394581c90efffe9cbd7418
+PODFILE CHECKSUM: 7320a97f171fd2780c45c9d29ecb757f9173e725
 
 COCOAPODS: 1.9.3

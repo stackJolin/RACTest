@@ -1,0 +1,28 @@
+{
+  "name": "LTUIKit",
+  "version": "0.1.0",
+  "summary": "A short description of LTUIKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/stackjolin/LTUIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "stackjolin": "zhuhoulin@windimg.com"
+  },
+  "source": {
+    "git": "https://github.com/stackjolin/LTUIKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LTUIKit/Classes/**/*",
+  "public_header_files": "LTUIKit/Classes/**/*.h",
+  "dependencies": {
+    "LTCoreKit": [
+
+    ]
+  }
+}
