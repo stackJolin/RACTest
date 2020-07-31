@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic , copy) OCCopyTest *obj2;
 
-@property(nonatomic , weak) NSInteger adfd;
+@property(nonatomic , assign) NSInteger adfd;
 
 @property(nonatomic , copy) NSArray *arr1;
 @property(nonatomic , copy) NSMutableArray *arr2;

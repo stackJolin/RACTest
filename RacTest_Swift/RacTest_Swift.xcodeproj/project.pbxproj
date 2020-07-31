@@ -32,6 +32,8 @@
 		8996A24424CC11E7009D13D3 /* SwiftNewFeature5.3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeature5.3.swift; sourceTree = "<group>"; };
 		8996A24624CC1B31009D13D3 /* SwiftNewFeature4.1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeature4.1.swift; sourceTree = "<group>"; };
 		8996A24824CC1BFA009D13D3 /* SwiftNewFeature4.2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewFeature4.2.swift; sourceTree = "<group>"; };
+		8996A24B24CE7B1F009D13D3 /* Swift-数组操作.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Swift-数组操作.md"; sourceTree = "<group>"; };
+		8996A24C24CE7B2F009D13D3 /* Swift-字典操作.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Swift-字典操作.md"; sourceTree = "<group>"; };
 		89D057EF24ACD84E00464F11 /* RacTest_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RacTest_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D057F224ACD84E00464F11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D057F624ACD84E00464F11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,15 @@
 			path = SwiftNewFeature;
 			sourceTree = "<group>";
 		};
+		8996A24A24CE7AF9009D13D3 /* Swift基础 */ = {
+			isa = PBXGroup;
+			children = (
+				8996A24B24CE7B1F009D13D3 /* Swift-数组操作.md */,
+				8996A24C24CE7B2F009D13D3 /* Swift-字典操作.md */,
+			);
+			path = "Swift基础";
+			sourceTree = "<group>";
+		};
 		89D057E624ACD84E00464F11 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +99,7 @@
 		89D057F124ACD84E00464F11 /* RacTest_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				8996A24A24CE7AF9009D13D3 /* Swift基础 */,
 				8996A23D24CC1033009D13D3 /* SwiftNewFeature */,
 				89D057F224ACD84E00464F11 /* AppDelegate.swift */,
 				89D057F624ACD84E00464F11 /* ViewController.swift */,
