@@ -99,6 +99,7 @@
 		89D057F124ACD84E00464F11 /* RacTest_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				89ED05142524643800EC4498 /* Kingfisher */,
 				8996A24A24CE7AF9009D13D3 /* Swift基础 */,
 				8996A23D24CC1033009D13D3 /* SwiftNewFeature */,
 				89D057F224ACD84E00464F11 /* AppDelegate.swift */,
@@ -110,6 +111,13 @@
 				893E152E24C004910024FD2A /* RouterTest.swift */,
 			);
 			path = RacTest_Swift;
+			sourceTree = "<group>";
+		};
+		89ED05142524643800EC4498 /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Kingfisher;
 			sourceTree = "<group>";
 		};
 		E23C340CF751C858C16F8869 /* Pods */ = {

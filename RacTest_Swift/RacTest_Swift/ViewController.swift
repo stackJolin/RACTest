@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import HandyJSON
+import Kingfisher
 
 protocol zhuhoulin {
     
@@ -31,18 +32,34 @@ class ViewController: UIViewController, zhuhoulin {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.dddddd()
-        self.func2()
-        let json:JSON = JSON(parseJSON: "")
-        let a = json["d"]["c"].boolValue
-        
-        let jsonStr = "{\"name\":\"fdf\"}"
-        
-//        let model = HandyJsonObj1.deserialize(from: jsonStr)
-        
-        let model1 = HandyJsonObj2.deserialize(from: jsonStr)
+//        self.dddddd()
+//        self.func2()
+//        let json:JSON = JSON(parseJSON: "")
+//        let a = json["d"]["c"].boolValue
+//
+//        let jsonStr = "{\"name\":\"fdf\"}"
+//
+////        let model = HandyJsonObj1.deserialize(from: jsonStr)
+//
+//        let model1 = HandyJsonObj2.deserialize(from: jsonStr)
         // Do any additional setup after loading the view.
+        
+        let iv = UIImageView()
+        
+        let b = Ddddd()
+        b.kf
+        
+        iv.kf.setImage(with: <#T##Source?#>)
+
     }
+}
+
+class Ddddd:NSObject {
+    
+}
+
+extension Ddddd:KingfisherCompatible {
+    
 }
 
 

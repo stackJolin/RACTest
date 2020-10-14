@@ -8,6 +8,8 @@ def all_pods
   pod 'HandyJSON', :path => '../HandyJSON'
   pod 'Codextended', :path => '../Codextended'
   pod 'ObjectMapper', :path => '../ObjectMapper/'
+  pod 'SwiftyUserDefaults', :path => '../SwiftyUserDefaults/'
+  pod 'Kingfisher', :path => '../Kingfisher/'
 end
 
 target 'RacTest_Swift' do

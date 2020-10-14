@@ -1,31 +1,43 @@
 PODS:
   - Codextended (0.2.0)
   - HandyJSON (5.0.2)
+  - Kingfisher (5.15.5):
+    - Kingfisher/Core (= 5.15.5)
+  - Kingfisher/Core (5.15.5)
   - ObjectMapper (4.2.0)
   - SwiftyJSON (5.0.0)
+  - SwiftyUserDefaults (5.0.0)
 
 DEPENDENCIES:
   - Codextended (from `../Codextended`)
   - HandyJSON (from `../HandyJSON`)
+  - Kingfisher (from `../Kingfisher/`)
   - ObjectMapper (from `../ObjectMapper/`)
   - SwiftyJSON (from `../SwiftyJSON`)
+  - SwiftyUserDefaults (from `../SwiftyUserDefaults/`)
 
 EXTERNAL SOURCES:
   Codextended:
     :path: "../Codextended"
   HandyJSON:
     :path: "../HandyJSON"
+  Kingfisher:
+    :path: "../Kingfisher/"
   ObjectMapper:
     :path: "../ObjectMapper/"
   SwiftyJSON:
     :path: "../SwiftyJSON"
+  SwiftyUserDefaults:
+    :path: "../SwiftyUserDefaults/"
 
 SPEC CHECKSUMS:
   Codextended: 9974c2ce5c3f2191c75aebaf88172b852482c06f
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  Kingfisher: e3ec347a5ab8817b7585ef46923a2d2b9a7d8fbe
   ObjectMapper: 5a6c9f063ef67e7fc0d7eb8958919e3121396a96
   SwiftyJSON: f0574c07d8ca1644050db687067209e3033a89a0
+  SwiftyUserDefaults: 33fcb42bd1feb53a37d873feb62c82967db5f7f6
 
-PODFILE CHECKSUM: 61701a3bd82c8800a3b502327f4f8b112ab89e79
+PODFILE CHECKSUM: 888596a5e24058485899729e61c5cead96ef0a45
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.9.3
