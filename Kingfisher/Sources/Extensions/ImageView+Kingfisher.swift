@@ -90,7 +90,7 @@ extension KingfisherWrapper where Base: KFCrossPlatformImageView {
             return nil
         }
 
-        /// 
+        ///
         var options = KingfisherParsedOptionsInfo(KingfisherManager.shared.defaultOptions + (options ?? .empty))
 
         let isEmptyImage = base.image == nil && self.placeholder == nil
@@ -99,6 +99,7 @@ extension KingfisherWrapper where Base: KFCrossPlatformImageView {
             mutatingSelf.placeholder = placeholder
         }
 
+        /// 加载动画
         let maybeIndicator = indicator
         maybeIndicator?.startAnimatingView()
 

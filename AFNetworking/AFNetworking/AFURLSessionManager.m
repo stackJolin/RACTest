@@ -952,7 +952,7 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
         disposition = self.sessionDidReceiveAuthenticationChallenge(session, challenge, &credential);
     }
     else {
-        // 如果是服务器发来的证书
+        // 如果使用的是 验证服务器端证书的方式 进行验证
         if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
             // 处理自签名和CA机构颁发的证书
             if ([self.securityPolicy evaluateServerTrust:challenge.protectionSpace.serverTrust forDomain:challenge.protectionSpace.host]) {
@@ -968,7 +968,7 @@ didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
                 disposition = NSURLSessionAuthChallengeCancelAuthenticationChallenge;
             }
         }
-        else {
+        else { // 其他验证方式，比如client
             disposition = NSURLSessionAuthChallengePerformDefaultHandling;
         }
     }
@@ -1020,7 +1020,6 @@ willPerformHTTPRedirection:(NSHTTPURLResponse *)response
         disposition = self.taskDidReceiveAuthenticationChallenge(session, task, challenge, &credential);
     }
     else {
-        // 如果服务器证书可信
         if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
             if ([self.securityPolicy evaluateServerTrust:challenge.protectionSpace.serverTrust forDomain:challenge.protectionSpace.host]) {
                 disposition = NSURLSessionAuthChallengeUseCredential;

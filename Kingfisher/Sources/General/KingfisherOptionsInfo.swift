@@ -217,6 +217,7 @@ public enum KingfisherOptionsInfoItem {
     ///
     /// Set this options will stop that flickering by keeping all loading in the same queue (typically the UI queue
     /// if you are using Kingfisher's extension methods to set an image), with a tradeoff of loading performance.
+    /// 同步获取disk缓存中的数据
     case loadDiskFileSynchronously
     
     /// The expiration setting for memory cache. By default, the underlying `MemoryStorage.Backend` uses the

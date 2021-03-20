@@ -56,7 +56,7 @@
       "name": "PINRemoteImage",
       "dependencies": {
         "PINRemoteImage/iOS": [
-          "= 3.0.0-beta.9"
+
         ],
         "PINRemoteImage/PINCache": [
 

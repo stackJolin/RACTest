@@ -32,10 +32,12 @@
 - (void)bindView {
     self.view.backgroundColor = UIColor.whiteColor;
     
-    [OCCopyTest testPropertyCopy];
     
-
-    OCBlockTest *a = [OCBlockTest new];
+    
+//    [OCCopyTest testPropertyCopy];
+//
+//
+//    OCBlockTest *a = [OCBlockTest new];
     
 //    dispatch_queue_t serialQueue = dispatch_queue_create("Dan-serial", DISPATCH_QUEUE_SERIAL);
 //    for(int i = 0; i < 5; i++){

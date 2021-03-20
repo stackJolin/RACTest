@@ -1,6 +1,6 @@
 {
   "name": "AFNetworking",
-  "version": "3.2.1",
+  "version": "4.0",
   "license": "MIT",
   "summary": "A delightful iOS and OS X networking framework.",
   "homepage": "https://github.com/AFNetworking/AFNetworking",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/AFNetworking/AFNetworking.git",
-    "tag": "3.2.1",
+    "tag": "4.0",
     "submodules": true
   },
   "requires_arc": true,

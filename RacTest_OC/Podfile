@@ -1,7 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
-
 def all_pods
   pod 'Masonry'
   pod 'IQKeyboardManager'
@@ -21,11 +20,33 @@ def all_pods
   pod 'YYKit', :path => '../YYKit/'
 #  pod 'YYCache', :path => '../YYCache/'
   pod 'SDWebImage', :path => '../SDWebImage/'
+  pod 'SDWebImageWebPCoder', :path => '../SDWebImageWebPCoder/'
+#  pod 'SDWebImageSVGCoder', :path => '../SDWebImageSVGCoder/'
+#  pod 'SDWebImageLottieCoder', :path => '../SDWebImageLottieCoder/'
   pod 'MJExtension', :path => '../MJExtension/'
   pod 'KVOController', :path => '../KVOController/'
   pod 'CTMediator', :path => '../CTMediator/'
   pod 'VKURLAction', :path => '../VKURLAction/'
   pod 'AsyncDisplayKit', :path => '../AsyncDisplayKit/'
+  pod 'YTKNetwork', :path => '../YTKNetwork/'
+  
+  pod 'PINCache', :path => '../PINCache/'
+  pod 'PINOperation', :path => '../PINOperation/'
+  pod 'KSCrash', :path => '../KSCrash/'
+
+# 腾讯出品 内存泄漏监听套件
+  # 监听内存泄漏
+  pod 'MLeaksFinder', :path => '../MLeaksFinder/'
+  # OOM(内存溢出)监控、大内存分配监控、内存泄漏检测
+  pod 'OOMDetector', :path => '../OOMDetector/'
+  
+# FB 内存泄漏监听套件
+  pod 'FBRetainCycleDetector', :path => '../FBRetainCycleDetector/'
+  pod 'FBAllocationTracker', :path => '../FBAllocationTracker/'
+  pod 'FBMemoryProfiler', :path => '../FBMemoryProfiler/'
+  
+#  pod 'FMDB', :path => '../fmdb/'
+  
   
 #  pod 'SDWebImageWebPCoder', :path => '../SDWebImageWebPCoder/'
   

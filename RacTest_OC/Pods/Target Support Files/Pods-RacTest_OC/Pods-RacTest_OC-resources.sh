@@ -98,9 +98,11 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/../../MJRefresh-3.3.1/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_ROOT}/../../OOMDetector/assets/oomgif.gif"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/../../MJRefresh-3.3.1/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_ROOT}/../../OOMDetector/assets/oomgif.gif"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
